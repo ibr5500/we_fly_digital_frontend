@@ -1,9 +1,9 @@
 import { applyMiddleware, combineReducers, legacy_createStore as createStore } from 'redux';
 import thunk from 'redux-thunk';
-import greetingReducer from './greeting/greeting';
+import userReducer from './users/users';
 
 const rootReducer = combineReducers({
-  greetingReducer,
+  users: userReducer,
 });
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
