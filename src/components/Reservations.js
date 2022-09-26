@@ -16,7 +16,7 @@ function Reservations() {
     <div>
       <h1>BOOK A FLIGHT DESTINATION</h1>
       <p>Travel the world with us</p>
-      { users && <p>{users.fullname}</p> }
+      { users && users.map((user) => <p key={user.id}>{user.username}</p>)}
       <Link to="/reservationForm">Book Now</Link>
 
     </div>

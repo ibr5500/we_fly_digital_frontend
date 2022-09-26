@@ -3,7 +3,7 @@ const USERS = 'USERS';
 export const getUsers = (payload) => ({ type: USERS, payload });
 
 export const fetchUsers = () => async (dispatch) => {
-  const url = 'http://[::1]:3000/api/v1/users';
+  const url = 'http://[::1]:3000/users';
   const res = await fetch(url);
   const resJson = await res.json();
 
