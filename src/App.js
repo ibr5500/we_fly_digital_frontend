@@ -5,10 +5,10 @@ import Reservations from './components/Reservations';
 
 function App() {
   return (
-    <div className="App" >
+    <div className="App">
+      <Reservations />
       <Routes>
-        <Route path='/reservations' element={<Reservations />}/>
-        <Route path='/reservationForm' element={<ReservationForm />}/>
+        <Route path="/reservationForm" element={<ReservationForm />} />
       </Routes>
     </div>
   );
