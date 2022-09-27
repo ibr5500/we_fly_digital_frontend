@@ -9,7 +9,9 @@ function Reservations() {
 
   useEffect(() => {
     dispach(fetchUsers());
+    // eslint-disable-next-line
   }, []);
+  // eslint-disable-next-line
   console.log(users);
 
   return (
