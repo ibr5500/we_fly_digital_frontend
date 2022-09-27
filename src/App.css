@@ -89,20 +89,21 @@ span i:hover {
     position: fixed;
     right: 0;
   }
+
   @keyframes toggleNavpanel {
-    from {left:-296px;}
-    to {left:-296px;}
+    from { left: -296px; }
+    to { left: -296px; }
   }
-  
+
   /* The element to apply the animation to */
-  .hidden{
+  .hidden {
     width: 88vw;
-    left:-296px;
+    left: -296px;
     animation-name: toggleNavpanel;
     animation-duration: 4s;
   }
-  .nav-panel{
+
+  .nav-panel {
     width: 88vw;
   }
-
 }
