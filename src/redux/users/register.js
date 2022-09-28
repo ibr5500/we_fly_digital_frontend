@@ -1,6 +1,6 @@
-const USERS = 'USERS';
+const REGISTER = 'REGISTER';
 
-export const getUsers = (payload) => ({ type: USERS, payload });
+export const getRegister = (payload) => ({ type: REGISTER, payload });
 
 export const fetchUsers = () => async (dispatch) => {
   const url = 'http://[::1]:3000/users';

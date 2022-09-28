@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { fetchUsers } from '../redux/users/users';
+import { fetchUsers } from '../redux/users/register';
 
 function Reservations() {
   const users = useSelector((state) => state.users.user);
