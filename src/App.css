@@ -1,39 +1,109 @@
-.App {
-  text-align: center;
+ul {
+  list-style: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav-panel {
+  height: 100vh;
+  width: 21vw;
+  background-color: #fff;
+  top: 0;
+  position: fixed;
+  border-right: solid 2px #f1f1f1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-panel a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.active {
+  background-color: #97bf19;
+}
+
+.panel-links {
+  list-style: none;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-around;
+  height: 50%;
+}
+
+.panel-links li {
+  padding: 10px 0;
+  font-size: 15px;
+  text-align: center;
+  width: 88%;
+}
+
+.panel-links li:hover {
+  background-color: #97bf19;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.header__logo {
+  margin: 0 auto;
+  width: 40%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.header__logo a {
+  display: inline-block;
+}
+
+.header__logo img {
+  width: 100%;
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-around;
+  padding: 2% 0;
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.mobile-toggle {
+  display: none;
+}
+
+span i {
+  font-size: 17px;
+}
+
+span i:hover {
+  color: #97bf19;
+  cursor: pointer;
+}
+
+/* Mobile screen humberger menu */
+
+@media only screen and (max-width: 600px) {
+  .mobile-toggle {
+    display: block;
+    position: fixed;
+    right: 0;
   }
 
-  to {
-    transform: rotate(360deg);
+  @keyframes toggleNavpanel {
+    from { left: -296px; }
+    to { left: -296px; }
+  }
+
+  /* The element to apply the animation to */
+  .hidden {
+    width: 88vw;
+    left: -296px;
+    animation-name: toggleNavpanel;
+    animation-duration: 4s;
+  }
+
+  .nav-panel {
+    width: 88vw;
   }
 }
