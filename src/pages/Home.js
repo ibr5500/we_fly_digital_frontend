@@ -17,7 +17,7 @@ const Home = () => {
       { details && details.map((item) => (
         <div key={item.id} className="card">
           <div className="img-container">
-            <img src={item.logo} alt={item.name} />
+            <img src={item.image} alt={item.name} />
           </div>
           <div className="contents">
             <h3>{item.name}</h3>
@@ -25,7 +25,7 @@ const Home = () => {
             ................
             <h4>
               Price: $
-              {item.num_of_seats}
+              {item.price}
             </h4>
           </div>
           <Link to="/details/:id" className="btn-link">View details</Link>
