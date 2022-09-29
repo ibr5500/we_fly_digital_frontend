@@ -27,7 +27,7 @@ export const postRegister = (newUser) => async (dispatch) => {
 const userReducer = (state = [], action) => {
   switch (action.type) {
     case REGISTER:
-      return [...state, action.payload];
+      return [...state.user, action.payload];
     case USERS:
       return action.payload;
 

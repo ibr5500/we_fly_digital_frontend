@@ -9,8 +9,7 @@ function User() {
   const fullnameRef = useRef();
   const dispach = useDispatch();
 
-  const handleRegisterSubmit = (e) => {
-    e.preventDefault();
+  const handleRegisterSubmit = () => {
     const newUser = {
       user: {
         fullname: fullnameRef.current.value,
@@ -31,7 +30,7 @@ function User() {
         <input type="text" ref={usernameRef} placeholder="UserName" />
         <input type="text" ref={emailRef} placeholder="Email" />
         <input type="text" ref={passwordRef} placeholder="Password" />
-        <a href="/" onClick={(e) => handleRegisterSubmit(e)}>Register</a>
+        <a href="/" onClick={handleRegisterSubmit}>Register</a>
       </form>
     </section>
   );
