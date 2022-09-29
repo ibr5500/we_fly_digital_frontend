@@ -36,7 +36,7 @@ const Home = () => {
         >
           { details && details.map((item) => (
             <div key={item.id} className="flights">
-              <Link to="/details/:id" className="link">
+              <Link to={`/flight/${item.id}`} className="link">
                 <div className="img-container">
                   <img src={item.image} alt={item.name} />
                 </div>

@@ -118,6 +118,7 @@ span i:hover {
   text-align: center;
   margin: 2rem auto 0 32rem;
 }
+
 .header h2 {
   font-weight: 600;
 }
@@ -184,6 +185,6 @@ h4 {
 }
 
 .slider-control-centerleft button,
-.slider-control-centerright button{
+.slider-control-centerright button {
   background: none !important;
 }
