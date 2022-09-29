@@ -1,12 +1,13 @@
 import React, { useRef } from 'react';
-// import { useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { fetchNewUser } from '../redux/users/registerSlice';
 
 function User() {
   const usernameRef = useRef();
   const passwordRef = useRef();
   const emailRef = useRef();
   const fullnameRef = useRef();
-  // const dispach = useDispatch();
+  const dispach = useDispatch();
 
   const handleRegisterSubmit = () => {
     const newUser = {
@@ -17,9 +18,8 @@ function User() {
         password: passwordRef.current.value,
       },
     };
-    return newUser;
 
-    // dispach(postRegister(newUser));
+    dispach(fetchNewUser(newUser));
   };
 
   return (

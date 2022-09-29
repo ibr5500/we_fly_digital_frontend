@@ -62,6 +62,6 @@ const userSlice = createSlice({
     });
   },
 });
-export const userActions = userSlice.actions;
+
 const userReducer = userSlice.reducer;
 export default userReducer;
