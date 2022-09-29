@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { useDispatch } from 'react-redux';
-import { postRegister } from '../redux/users/registerSlice';
+import { postRegister } from '../redux/users/userSlice';
 
 function User() {
   const usernameRef = useRef();
