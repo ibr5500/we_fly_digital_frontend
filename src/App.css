@@ -108,19 +108,38 @@ span i:hover {
   }
 }
 
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  margin: 2rem auto 0 32rem;
+}
+.header h2 {
+  font-weight: 600;
+}
+
+.header p {
+  color: #3a3a3a;
+  font-style: italic;
+}
+
 .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   width: 60%;
   height: auto;
-  margin: 1rem auto 5rem auto;
+  margin: 0 auto;
   gap: 15px;
 }
 
-.card {
+.flights {
   margin: 1rem auto 0 auto;
-  width: 30%;
+  height: 300px;
   text-align: center;
 }
 
@@ -153,17 +172,18 @@ h4 {
   color: #3a3a3a;
 }
 
-.btn-link {
-  padding: 10px 20px;
+.link {
   text-decoration: none;
-  background: #4fbe4f;
-  color: #3a3a3a;
-  font-weight: 500;
-  border: 2px solid;
-  border-radius: 10px;
 }
 
-.btn-link:hover {
-  background: #3a3a3a;
-  color: #fff;
+.icon {
+  width: 3rem;
+  font-size: 2.5rem;
+  color: #97bf19;
+  background: none;
+}
+
+.slider-control-centerleft button,
+.slider-control-centerright button{
+  background: none !important;
 }
