@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { fetchUsers } from '../redux/users/register';
+import { fetchUsers } from '../redux/users/userSlice';
 
 function Reservations() {
-  const users = useSelector((state) => state.users.user);
+  const users = useSelector((state) => state.user.users.user);
   const dispach = useDispatch();
 
   useEffect(() => {
