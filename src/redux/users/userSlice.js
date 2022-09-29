@@ -2,29 +2,6 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 const url = 'http://[::1]:3000';
 
-// export const postRegister = (newUser) => async (dispatch) => {
-//   await fetch(url, {
-//     method: 'POST',
-//     headers: {
-//       'Content-type': 'application/json',
-//     },
-//     body: JSON.stringify(newUser),
-//   });
-//   console.log((JSON.stringify(newUser)));
-//   dispatch(registerUser(newUser));
-// };
-
-// const userReducer = (state = [], action) => {
-//   switch (action.type) {
-//     case REGISTER:
-//       return [...state.user, action.payload];
-//     case USERS:
-//       return action.payload;
-
-//     default: return state;
-//   }
-// };
-
 const initialState = {
   loading: false,
   users: [],

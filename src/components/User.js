@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { useDispatch } from 'react-redux';
+import { fetchCurrentUser } from '../redux/users/loginSlice';
 import { fetchNewUser } from '../redux/users/registerSlice';
 
 function User() {
@@ -9,7 +10,8 @@ function User() {
   const fullnameRef = useRef();
   const dispach = useDispatch();
 
-  const handleRegisterSubmit = () => {
+  const handleRegisterSubmit = (e) => {
+    e.preventDefault(e);
     const newUser = {
       user: {
         fullname: fullnameRef.current.value,
@@ -20,18 +22,39 @@ function User() {
     };
 
     dispach(fetchNewUser(newUser));
+
+    fullnameRef.current.value = '';
+    emailRef.current.value = '';
+    usernameRef.current.value = '';
+    passwordRef.current.value = '';
   };
+
+  const handleLoginSubmit = (e) => {
+    e.preventDefault(e);
+    const currentUser = {
+      username: usernameRef.current.value,
+      password: passwordRef.current.value,
+    }
+
+    dispach(fetchCurrentUser(currentUser))
+  }
 
   return (
     <section>
       <h1>REGISTER</h1>
-      <form>
+      <form onSubmit={handleRegisterSubmit}>
         <input type="text" ref={fullnameRef} placeholder="FullName" />
         <input type="text" ref={usernameRef} placeholder="UserName" />
         <input type="text" ref={emailRef} placeholder="Email" />
         <input type="text" ref={passwordRef} placeholder="Password" />
-        <a href="/" onClick={handleRegisterSubmit}>Register</a>
+        <button type='submit'>Register</button>
       </form>
+
+    <form onSubmit={handleLoginSubmit}>
+      <input type="text" ref={usernameRef} placeholder="UserName" />
+      <input type="text" ref={passwordRef} placeholder="Password" />
+      <button type='submit'>Login</button>
+    </form>
     </section>
   );
 }
