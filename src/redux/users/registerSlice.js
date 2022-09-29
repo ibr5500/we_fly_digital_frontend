@@ -1,3 +1,5 @@
+import { createSlice } from "@reduxjs/toolkit";
+
 const USERS = 'USERS';
 const REGISTER = 'REGISTER';
 const url = 'http://[::1]:3000/users';
@@ -35,4 +37,16 @@ const userReducer = (state = [], action) => {
   }
 };
 
-export default userReducer;
+// export default userReducer;
+
+const initialState = [];
+const registerSlice = createSlice({
+  name: 'register',
+  initialState,
+  reducers: {
+    
+  }
+})
+const registerReducer = registerSlice.reducer;
+const registerActions = registerSlice.actions;
+export default registerReducer;
