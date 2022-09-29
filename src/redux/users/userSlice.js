@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-const url = 'http://[::1]:3000/users';
+const url = 'http://[::1]:3000';
 
 // export const postRegister = (newUser) => async (dispatch) => {
 //   await fetch(url, {
@@ -42,17 +42,23 @@ const userSlice = createSlice({
   initialState,
   extraReducers: (builder) => {
     builder.addCase(fetchUsers.pending, (state) => {
-      state.loading = true;
+      const stateLoading = state;
+
+      stateLoading.loading = true;
     });
     builder.addCase(fetchUsers.fulfilled, (state, action) => {
-      state.loading = false;
-      state.users = action.payload;
-      state.error = '';
+      const stateFulfilled = state;
+
+      stateFulfilled.loading = false;
+      stateFulfilled.users = action.payload;
+      stateFulfilled.error = '';
     });
     builder.addCase(fetchUsers.rejected, (state, action) => {
-      state.loading = false;
-      state.users = [];
-      state.error = action.error.message;
+      const stateRejected = state;
+
+      stateRejected.loading = false;
+      stateRejected.users = [];
+      stateRejected.error = action.error.message;
     });
   },
 });
