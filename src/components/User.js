@@ -34,10 +34,10 @@ function User() {
     const currentUser = {
       username: usernameRef.current.value,
       password: passwordRef.current.value,
-    }
+    };
 
-    dispach(fetchCurrentUser(currentUser))
-  }
+    dispach(fetchCurrentUser(currentUser));
+  };
 
   return (
     <section>
@@ -47,14 +47,14 @@ function User() {
         <input type="text" ref={usernameRef} placeholder="UserName" />
         <input type="text" ref={emailRef} placeholder="Email" />
         <input type="text" ref={passwordRef} placeholder="Password" />
-        <button type='submit'>Register</button>
+        <button type="submit">Register</button>
       </form>
 
-    <form onSubmit={handleLoginSubmit}>
-      <input type="text" ref={usernameRef} placeholder="UserName" />
-      <input type="text" ref={passwordRef} placeholder="Password" />
-      <button type='submit'>Login</button>
-    </form>
+      <form onSubmit={handleLoginSubmit}>
+        <input type="text" ref={usernameRef} placeholder="UserName" />
+        <input type="text" ref={passwordRef} placeholder="Password" />
+        <button type="submit">Login</button>
+      </form>
     </section>
   );
 }
