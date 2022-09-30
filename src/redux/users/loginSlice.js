@@ -1,20 +1,21 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import baseURL from '../api';
 
-const url = 'http://localhost:3000/login';
 const initialState = {
   loading: false,
   login: [],
   error: '',
 };
 
-export const fetchCurrentUser = createAsyncThunk('login/fetchCurrentUser', async (currentUser) => {
-  await fetch(url, {
+export const fetchCurrentUser = createAsyncThunk('login/fetchCurrentUser', (currentUser) => {
+  const res = fetch(`${baseURL}/login`, {
     method: 'POST',
     headers: {
       'Content-type': 'application/json',
     },
     body: JSON.stringify(currentUser),
-  });
+  }).then((res) => res.json());
+  return res;
 });
 
 const loginSlice = createSlice({

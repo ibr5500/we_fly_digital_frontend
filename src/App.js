@@ -6,6 +6,7 @@ import BookFlight from './Components/BookFlight';
 import DeletedFlights from './Components/DeletedFlights';
 import Reservations from './Components/Reservations';
 import SignUp from './Components/SignUp';
+import Login from './Components/Login';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/cancelled" element={<DeletedFlights />} />
         <Route path="/reserved" element={<Reservations />} />
         <Route path="/signUp" element={<SignUp />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </div>
   );

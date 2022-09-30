@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import baseURL from '../api';
 
-const url = 'http://localhost:3000/users';
 const initialState = {
   loading: false,
   register: [],
@@ -8,7 +8,7 @@ const initialState = {
 };
 
 export const fetchNewUser = createAsyncThunk('register/fetchNewUser', (newUser) => {
-  const res = fetch(url, {
+  const res = fetch(`${baseURL}/users`, {
     method: 'POST',
     headers: {
       'Content-type': 'application/json',

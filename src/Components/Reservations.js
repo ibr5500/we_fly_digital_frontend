@@ -10,7 +10,7 @@ function Reservations() {
   useEffect(() => {
     dispach(fetchUsers());
   }, []);
-  console.log(users);
+  // console.log(users);
 
   return (
     <div>
