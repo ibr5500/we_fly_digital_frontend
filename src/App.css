@@ -1,39 +1,190 @@
-.App {
-  text-align: center;
+ul {
+  list-style: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav-panel {
+  height: 100vh;
+  width: 21vw;
+  background-color: #fff;
+  top: 0;
+  position: fixed;
+  border-right: solid 2px #f1f1f1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-panel a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.active {
+  background-color: #97bf19;
+}
+
+.panel-links {
+  list-style: none;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-around;
+  height: 50%;
+}
+
+.panel-links li {
+  padding: 10px 0;
+  font-size: 15px;
+  text-align: center;
+  width: 88%;
+}
+
+.panel-links li:hover {
+  background-color: #97bf19;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.header__logo {
+  margin: 0 auto;
+  width: 40%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.header__logo a {
+  display: inline-block;
+}
+
+.header__logo img {
+  width: 100%;
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-around;
+  padding: 2% 0;
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.mobile-toggle {
+  display: none;
+}
+
+span i {
+  font-size: 17px;
+}
+
+span i:hover {
+  color: #97bf19;
+  cursor: pointer;
+}
+
+/* Mobile screen humberger menu */
+
+@media only screen and (max-width: 600px) {
+  .mobile-toggle {
+    display: block;
+    position: fixed;
+    right: 0;
   }
 
-  to {
-    transform: rotate(360deg);
+  @keyframes toggleNavpanel {
+    from { left: -296px; }
+    to { left: -296px; }
   }
+
+  /* The element to apply the animation to */
+  .hidden {
+    width: 88vw;
+    left: -296px;
+    animation-name: toggleNavpanel;
+    animation-duration: 4s;
+  }
+
+  .nav-panel {
+    width: 88vw;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  margin: 2rem auto 0 32rem;
+}
+
+.header h2 {
+  font-weight: 600;
+}
+
+.header p {
+  color: #3a3a3a;
+  font-style: italic;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 60%;
+  height: auto;
+  margin: 0 auto;
+  gap: 15px;
+}
+
+.flights {
+  margin: 1rem auto 0 auto;
+  height: 300px;
+  text-align: center;
+}
+
+.img-container {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto 10px auto;
+}
+
+.img-container img {
+  max-width: 200px;
+  min-height: 120px;
+  width: 100%;
+  border-radius: 10px;
+  margin: auto;
+}
+
+.img-container img:hover {
+  transform: scale(1.2, 1.2);
+}
+
+.contents {
+  color: #ababab;
+  font-size: 1.2rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.contents h3,
+h4 {
+  color: #3a3a3a;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.icon {
+  width: 3rem;
+  font-size: 2.5rem;
+  color: #97bf19;
+  background: none;
+}
+
+.slider-control-centerleft button,
+.slider-control-centerright button {
+  background: none !important;
 }
