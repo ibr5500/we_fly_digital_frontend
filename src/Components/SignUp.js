@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { fetchCurrentUser } from '../redux/users/loginSlice';
 import { fetchNewUser } from '../redux/users/registerSlice';
 
-function User() {
+function SignUp() {
   const usernameRef = useRef();
   const passwordRef = useRef();
   const emailRef = useRef();
@@ -42,7 +42,7 @@ function User() {
   return (
     <section>
       <h1>REGISTER</h1>
-      <form onSubmit={handleRegisterSubmit}>
+      <form onSubmit={handleRegisterSubmit} className="pl-5 ml-5">
         <input type="text" ref={fullnameRef} placeholder="FullName" />
         <input type="text" ref={usernameRef} placeholder="UserName" />
         <input type="text" ref={emailRef} placeholder="Email" />
@@ -59,4 +59,4 @@ function User() {
   );
 }
 
-export default User;
+export default SignUp;

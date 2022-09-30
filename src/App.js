@@ -5,6 +5,7 @@ import Home from './Components/Home';
 import BookFlight from './Components/BookFlight';
 import DeletedFlights from './Components/DeletedFlights';
 import Reservations from './Components/Reservations';
+import SignUp from './Components/SignUp';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/reserve" element={<BookFlight />} />
         <Route path="/cancelled" element={<DeletedFlights />} />
         <Route path="/reserved" element={<Reservations />} />
+        <Route path="/signUp" element={<SignUp />} />
       </Routes>
     </div>
   );
