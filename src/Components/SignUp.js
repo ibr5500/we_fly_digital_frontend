@@ -1,60 +1,60 @@
-import React, { useRef } from 'react';
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { fetchCurrentUser } from '../redux/users/loginSlice';
+// import { fetchCurrentUser } from '../redux/users/loginSlice';
 import { fetchNewUser } from '../redux/users/registerSlice';
 
 function SignUp() {
-  const usernameRef = useRef();
-  const passwordRef = useRef();
-  const emailRef = useRef();
-  const fullnameRef = useRef();
+  const [email, setEmail] = useState('');
+  const [fullname, setFullname] = useState('');
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
   const dispach = useDispatch();
 
   const handleRegisterSubmit = (e) => {
     e.preventDefault(e);
     const newUser = {
       user: {
-        fullname: fullnameRef.current.value,
-        username: usernameRef.current.value,
-        email: emailRef.current.value,
-        password: passwordRef.current.value,
+        fullname,
+        username,
+        email,
+        password,
       },
     };
 
     dispach(fetchNewUser(newUser));
 
-    fullnameRef.current.value = '';
-    emailRef.current.value = '';
-    usernameRef.current.value = '';
-    passwordRef.current.value = '';
+    // name.value = '';
+    // setEmail.value = '';
+    // setUsername.value = '';
+    // setPassword.value = '';
   };
 
-  const handleLoginSubmit = (e) => {
-    e.preventDefault(e);
-    const currentUser = {
-      username: usernameRef.current.value,
-      password: passwordRef.current.value,
-    };
+  // const handleLoginSubmit = (e) => {
+  //   e.preventDefault(e);
+  //   const currentUser = {
+  //     username: usernameRef.current.value,
+  //     password: passwordRef.current.value,
+  //   };
 
-    dispach(fetchCurrentUser(currentUser));
-  };
+  //   dispach(fetchCurrentUser(currentUser));
+  // };
 
   return (
     <section>
       <h1>REGISTER</h1>
       <form onSubmit={handleRegisterSubmit} className="pl-5 ml-5">
-        <input type="text" ref={fullnameRef} placeholder="FullName" />
-        <input type="text" ref={usernameRef} placeholder="UserName" />
-        <input type="text" ref={emailRef} placeholder="Email" />
-        <input type="text" ref={passwordRef} placeholder="Password" />
+        <input type="text" value={fullname} onChange={(e) => setFullname(e.target.value)} placeholder="FullName" />
+        <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="UserName" />
+        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" />
+        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
         <button type="submit">Register</button>
       </form>
 
-      <form onSubmit={handleLoginSubmit}>
+      {/* <form onSubmit={handleLoginSubmit}>
         <input type="text" ref={usernameRef} placeholder="UserName" />
         <input type="text" ref={passwordRef} placeholder="Password" />
         <button type="submit">Login</button>
-      </form>
+      </form> */}
     </section>
   );
 }
