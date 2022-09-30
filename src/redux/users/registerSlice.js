@@ -7,14 +7,15 @@ const initialState = {
   error: '',
 };
 
-export const fetchNewUser = createAsyncThunk('register/fetchNewUser', async (newUser) => {
-  await fetch(url, {
+export const fetchNewUser = createAsyncThunk('register/fetchNewUser', (newUser) => {
+  const res = fetch(url, {
     method: 'POST',
     headers: {
       'Content-type': 'application/json',
     },
     body: JSON.stringify(newUser),
-  });
+  }).then((res) => res.json());
+  return res;
 });
 
 const registerSlice = createSlice({
