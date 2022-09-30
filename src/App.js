@@ -1,10 +1,10 @@
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import NavigationPanel from './Components/NavigationPanel';
-import Home from './pages/Home';
-import BookFlight from './pages/BookFlight';
-import DeletedFlights from './pages/DeletedFlights';
-import Reservations from './pages/Reservations';
+import Home from './Components/Home';
+import BookFlight from './Components/BookFlight';
+import DeletedFlights from './Components/DeletedFlights';
+import Reservations from './Components/Reservations';
 
 function App() {
   return (
