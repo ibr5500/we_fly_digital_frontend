@@ -7,6 +7,7 @@ import DeletedFlights from './Components/DeletedFlights';
 import Reservations from './Components/Reservations';
 import SignUp from './Components/SignUp';
 import Login from './Components/Login';
+import AirlineForm from './Components/AirlineForm';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/reserved" element={<Reservations />} />
         <Route path="/signUp" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/newAirline" element={<AirlineForm />} />
       </Routes>
     </div>
   );
