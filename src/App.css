@@ -242,9 +242,11 @@ sign up page--------------------------------------------------------------------
   flex-direction: column;
 }
 
-.form-intro hr {
-  height: 2px;
-  background-color: white;
+.form-intro {
+  border-bottom:solid;
+  width: 80%;
+  margin: auto;
+ 
 }
 
 .form-signin input[type="email"] {

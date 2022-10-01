@@ -32,9 +32,9 @@ function SignUp() {
     <section className="form-section bg-lime-500 ">
       <div className="overlay">
         <div className="form-signin">
-          <div className="form-intro text-white text-center">
+          <div className="form-intro p-1 my-2 text-white text-center ">
             <h1>REGISTER</h1>
-            <hr className="px-2" />
+            {/* <hr className="px-2" /> */}
           </div>
           <form
             onSubmit={handleRegisterSubmit}

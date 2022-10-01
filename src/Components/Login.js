@@ -28,7 +28,7 @@ const Login = () => {
     <section className="form-section bg-lime-500 ">
       <div className="overlay">
         <div className="form-signin">
-          <div className="form-intro text-white text-center">
+          <div className="form-intro text-white text-center  p-1 my-2 ">
             <h2>Login</h2>
             <hr className="px-2" />
           </div>
