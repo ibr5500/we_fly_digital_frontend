@@ -14,8 +14,6 @@ const Home = () => {
     // eslint-disable-next-line
    }, []);
 
-  console.log(data.airlines);
-
   return (
     <section className="main">
       <div className="header">
@@ -37,23 +35,22 @@ const Home = () => {
           }}
         >
           <div className="flights">
-            {!(data.airlines) ? <p>There are no flight yet!!</p>
-              : data.airlines.map((item) => (
-                <Link key={item.id} to={`/flight/${item.id}`} className="link">
-                  <div className="img-container">
-                    <img src={item.image} alt={item.name} />
-                  </div>
-                  <div className="contents">
-                    <h3>{item.name}</h3>
-                    {' '}
-                    ................
-                    <h4>
-                      Price: $
-                      {item.price}
-                    </h4>
-                  </div>
-                </Link>
-              ))}
+            { data.airlines && data.airlines.map((item) => (
+              <Link key={item.id} to={`/flight/${item.id}`} className="link">
+                <div className="img-container">
+                  <img src={item.image} alt={item.name} />
+                </div>
+                <div className="contents">
+                  <h3>{item.name}</h3>
+                  {' '}
+                  ................
+                  <h4>
+                    Price: $
+                    {item.price}
+                  </h4>
+                </div>
+              </Link>
+            ))}
           </div>
         </Carousel>
       </div>
