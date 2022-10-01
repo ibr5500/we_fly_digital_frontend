@@ -1,19 +1,20 @@
-import React from 'react';
-// import { useDispatch, useSelector } from 'react-redux';
-// import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import Carousel from 'nuka-carousel/lib/carousel';
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa';
-// import { fetchData } from '../redux/details/details';
+import { fetchAirlines } from '../redux/data/airlines';
 
 const Home = () => {
-  // const details = useSelector((state) => state.details.data);
-  // const dispach = useDispatch();
+  const data = useSelector((state) => state.airlines.airlines);
+  const dispach = useDispatch();
 
-  // useEffect(() => {
-  //   dispach(fetchData());
-  //   // eslint-disable-next-line
-  // }, []);
-  console.log('hello');
+  useEffect(() => {
+    dispach(fetchAirlines());
+    // eslint-disable-next-line
+   }, []);
+
+  console.log(data.airlines);
 
   return (
     <section className="main">
@@ -36,20 +37,23 @@ const Home = () => {
           }}
         >
           <div className="flights">
-            {/* <Link to={`/flight/${item.id}`} className="link">
-                <div className="img-container">
-                  <img src={item.image} alt={item.name} />
-                </div>
-                <div className="contents">
-                  <h3>{item.name}</h3>
-                  {' '}
-                  ................
-                  <h4>
-                    Price: $
-                    {item.price}
-                  </h4>
-                </div>
-              </Link> */}
+            {!(data.airlines) ? <p>There are no flight yet!!</p>
+              : data.airlines.map((item) => (
+                <Link key={item.id} to={`/flight/${item.id}`} className="link">
+                  <div className="img-container">
+                    <img src={item.image} alt={item.name} />
+                  </div>
+                  <div className="contents">
+                    <h3>{item.name}</h3>
+                    {' '}
+                    ................
+                    <h4>
+                      Price: $
+                      {item.price}
+                    </h4>
+                  </div>
+                </Link>
+              ))}
           </div>
         </Carousel>
       </div>

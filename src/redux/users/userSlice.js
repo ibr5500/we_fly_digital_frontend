@@ -1,5 +1,9 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
+//
+// Delete this page before lunching !!!
+//
+
 const url = 'http://[::1]:3000';
 
 const initialState = {
