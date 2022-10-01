@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { fetchCurrentUser } from '../redux/users/loginSlice';
+import { fetchCurrentUser } from '../redux/users/registerSlice';
 
 const Login = () => {
   const [user, setUser] = useState({
