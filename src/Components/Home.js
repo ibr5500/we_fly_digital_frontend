@@ -14,8 +14,6 @@ const Home = () => {
     // eslint-disable-next-line
    }, []);
 
-  console.log(data);
-
   return (
     <section className="main">
       <div className="header">
