@@ -44,8 +44,10 @@ const registerSlice = createSlice({
     });
 
     builder.addCase(fetchCurrentUser.fulfilled, (state, action) => {
+      const result = action.payload;
       const stateFulfilled = state;
-      stateFulfilled.login = action.payload;
+      stateFulfilled.login = result;
+      if (result) sessionStorage.setItem('loginToken', result.token);
     });
 
     builder.addCase(fetchCurrentUser.rejected, (state, action) => {
@@ -56,5 +58,4 @@ const registerSlice = createSlice({
 });
 
 const registerReducer = registerSlice.reducer;
-
 export default registerReducer;

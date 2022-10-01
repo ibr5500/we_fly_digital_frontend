@@ -1,4 +1,4 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';import baseURL from '../api';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'; import baseURL from '../api';
 
 const initialState = {
   airlines: [],
@@ -9,8 +9,8 @@ export const fetchAirlines = createAsyncThunk('airline/fetchAirlines', async () 
   const res = await fetch(`${baseURL}/airlines`, {
     headers: {
       'Content-type': 'application/json',
-      'Authentication': `Bearer ${loginToken}`,
-    }, 
+      Authorization: `Bearer ${sessionStorage.getItem('loginToken')}`,
+    },
   });
   const resJson = await res.json();
   return resJson;
@@ -21,6 +21,7 @@ export const fetchNewAirlines = createAsyncThunk('airline/fetchNewAirlines', asy
     method: 'POST',
     headers: {
       'Content-type': 'application/json',
+      Authorization: `Bearer ${sessionStorage.getItem('loginToken')}`,
     },
     body: JSON.stringify(newAirline),
   }).then((res) => res.json());
