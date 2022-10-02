@@ -10,6 +10,14 @@ export const fetchData = () => async (dispatch) => {
   dispatch(getDetails(resJson));
 };
 
+export const fetchDetails = () => async (dispatch) => {
+  const url = 'http://127.0.0.1:3000/api/v1/airlines';
+  const res = await fetch(url);
+  const resJson = await res.json();
+
+  dispatch(getDetails(resJson));
+};
+
 const detailsReducer = (state = [], action) => {
   switch (action.type) {
     case GET_DATA:

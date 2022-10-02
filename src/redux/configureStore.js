@@ -1,12 +1,18 @@
-import { applyMiddleware, combineReducers, legacy_createStore as createStore } from 'redux';
-import thunk from 'redux-thunk';
-// import userReducer from './users/users';
-import detailsReducer from './details/details';
+import { configureStore } from '@reduxjs/toolkit';
+import { createLogger } from 'redux-logger';
+// import userReducer from './users/userSlice';
+import registerReducer from './users/registerSlice';
+import loginReducer from './users/loginSlice';
 
-const rootReducer = combineReducers({
-  // users: userReducer,
-  details: detailsReducer,
+const logger = createLogger();
+
+const store = configureStore({
+  reducer: {
+    // user: userReducer,
+    register: registerReducer,
+    login: loginReducer,
+  },
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 });
 
-const store = createStore(rootReducer, applyMiddleware(thunk));
 export default store;
