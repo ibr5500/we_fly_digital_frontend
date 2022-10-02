@@ -188,3 +188,71 @@ h4 {
 .slider-control-centerright button {
   background: none !important;
 }
+
+/* -------------------------------------------------------------------------------------------------------------------
+sign up page---------------------------------------------------------------------------
+*/
+.form-section {
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-image: url(./airplanes.jpg);
+  background-size: cover;
+  position: fixed;
+  top: 0;
+}
+
+.overlay {
+  width: 100%;
+  position: fixed;
+  height: 100vh;
+  background-color: rgba(151, 191, 25, 0.7);
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 60%;
+  padding: 15px;
+  margin: 10% auto;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-control {
+  border-radius: 20px;
+}
+
+.sign-up {
+  background-color: #97bf19;
+  border-radius: 20px;
+  color: white;
+  border: solid;
+}
+
+.log-in {
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.button-container {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-intro {
+  border-bottom:solid;
+  width: 80%;
+  margin: auto;
+ 
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+}

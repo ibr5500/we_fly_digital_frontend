@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { fetchNewUser } from '../redux/users/registerSlice';
 
 function SignUp() {
@@ -28,15 +29,78 @@ function SignUp() {
   };
 
   return (
-    <section>
-      <h1>REGISTER</h1>
-      <form onSubmit={handleRegisterSubmit} className="pl-5 ml-5">
-        <input type="text" value={newuser.fullname} onChange={(e) => setNewuser({ ...newuser, fullname: e.target.value })} placeholder="FullName" />
-        <input type="text" value={newuser.username} onChange={(e) => setNewuser({ ...newuser, username: e.target.value })} placeholder="UserName" />
-        <input type="email" value={newuser.email} onChange={(e) => setNewuser({ ...newuser, email: e.target.value })} placeholder="Email" />
-        <input type="password" value={newuser.password} onChange={(e) => setNewuser({ ...newuser, password: e.target.value })} placeholder="Password" />
-        <button type="submit">Register</button>
-      </form>
+    <section className="form-section bg-lime-500 ">
+      <div className="overlay">
+        <div className="form-signin">
+          <div className="form-intro p-1 my-2 text-white text-center ">
+            <h1>REGISTER</h1>
+            {/* <hr className="px-2" /> */}
+          </div>
+          <form
+            onSubmit={handleRegisterSubmit}
+            className="flex flex-col gap-5 items-center "
+          >
+            <div className="input-floor">
+              <label htmlFor="name-input" className="w-100 my-2">
+                <input
+                  id="name-input"
+                  className="form-control py-2  px-4 "
+                  type="text"
+                  value={newuser.fullname}
+                  onChange={(e) => setNewuser({ ...newuser, fullname: e.target.value })}
+                  placeholder="FullName"
+                />
+              </label>
+            </div>
+            <div className="">
+              <label htmlFor="username-input" className="w-100 my-2">
+                <input
+                  className="form-control py-2  px-4 "
+                  type="text"
+                  id="username-input"
+                  value={newuser.username}
+                  onChange={(e) => setNewuser({ ...newuser, username: e.target.value })}
+                  placeholder="UserName"
+                />
+              </label>
+            </div>
+            <div className="">
+              <label htmlFor="email-input" className="w-100 my-2">
+                <input
+                  id="email-input"
+                  className="form-control py-2  px-4 "
+                  type="email"
+                  value={newuser.email}
+                  onChange={(e) => setNewuser({ ...newuser, email: e.target.value })}
+                  placeholder="Email"
+                />
+              </label>
+            </div>
+            <div className="">
+              <label htmlFor="password-input" className="w-100 my-2">
+                <input
+                  id="password-input"
+                  className="form-control py-2  px-4"
+                  type="password"
+                  value={newuser.password}
+                  onChange={(e) => setNewuser({ ...newuser, password: e.target.value })}
+                  placeholder="Password"
+                />
+              </label>
+            </div>
+            <div className="button-container w-50">
+
+              <Link to="/signup" className="btn sign-up my-2">
+                SignUp
+              </Link>
+              <Link to="/login" className="btn log-in">
+                Login
+              </Link>
+
+            </div>
+          </form>
+        </div>
+      </div>
     </section>
   );
 }
