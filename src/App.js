@@ -24,7 +24,7 @@ function App() {
         <Route path="/signUp" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
         <Route path="/airlineForm" element={<AirlineForm />} />
-        <Route path="/reservationForm" element={<ReservationForm />} />
+        <Route path="/reservationForm/:id" element={<ReservationForm />} />
       </Routes>
     </div>
   );
