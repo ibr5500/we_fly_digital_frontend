@@ -17,13 +17,13 @@ function App() {
       {/* <NavigationPanel /> */}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/airline/:id" element={<AirlineDetails />} />
-        <Route path="/reserve" element={<BookFlight />} />
-        <Route path="/cancelled" element={<DeletedFlights />} />
-        <Route path="/reserved" element={<Reservations />} />
         <Route path="/signUp" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/airline/:id" element={<AirlineDetails />} />
+        <Route path="/cancelled" element={<DeletedFlights />} />
         <Route path="/airlineForm" element={<AirlineForm />} />
+        <Route path="/reserved" element={<Reservations />} />
+        <Route path="/reserve" element={<BookFlight />} />
         <Route path="/reservationForm/:id" element={<ReservationForm />} />
       </Routes>
     </div>
