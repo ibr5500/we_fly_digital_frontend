@@ -29,7 +29,7 @@ const Login = () => {
     if (!loginInfo.error) {
       setTimeout(() => {
         navigate('/');
-      }, 2000);
+      }, 1000);
     }
   };
 
