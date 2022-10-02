@@ -8,11 +8,11 @@ const AirlineDetails = () => {
   const airlineDetails = dataList.filter(
     (flight) => +flight.id === +airline.id,
   );
-  console.log(airlineDetails);
 
   return (
     <div className="container my-5
-     ">
+     "
+    >
       {airlineDetails.map((item) => (
         <div className="details-container" key={item.id}>
           <div className="img-container">
@@ -29,11 +29,8 @@ const AirlineDetails = () => {
               {' '}
               <h4>{item.price}</h4>
             </div>
-            <button className="btn book-btn my-2" type="button">
-              Book now
-            </button>
+            <Link className="btn book-btn my-2" to="/reservationForm">Book now</Link>
           </div>
-          <Link to="/reservationForm">Book now</Link>
         </div>
       ))}
     </div>
