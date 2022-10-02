@@ -1,8 +1,8 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
-const Details = () => {
+const AirlineDetails = () => {
   const airline = useParams();
   const dataList = useSelector((state) => state.airlines.airlines.data);
   const airlineDetails = dataList.filter(
@@ -33,10 +33,11 @@ const Details = () => {
               Book now
             </button>
           </div>
+          <Link to="/reservationForm">Book now</Link>
         </div>
       ))}
     </div>
   );
 };
 
-export default Details;
+export default AirlineDetails;

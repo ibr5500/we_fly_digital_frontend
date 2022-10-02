@@ -13,23 +13,6 @@ const Home = () => {
     dispach(fetchAirlines());
   }, [dispach]);
 
-  // function reloadPage() {
-  //  // The last "domLoading" Time //
-  //  const currentDocumentTimestamp = new Date(performance.timing.domLoading).getTime();
-  //  // Current Time //
-  //  const now = Date.now();
-  //  // Ten Seconds //
-  //  const tenSec = 10 * 1000;
-  //  // Plus Ten Seconds //
-  //  const plusTenSec = currentDocumentTimestamp + tenSec;
-  //  if (now > plusTenSec) {
-  //    // eslint-disable-next-line
-  //    location.reload();
-  //  }
-  // }
-
-  // reloadPage();
-
   return (
     <section className="main">
       <div className="header">
@@ -53,7 +36,7 @@ const Home = () => {
         <div className="flights">
           {!(dataList) ? <p>There are no flight yet!!</p>
             : dataList.map((item) => (
-              <Link key={item.id} to={`/flight/${item.id}`} className="link">
+              <Link key={item.id} to={`/airline/${item.id}`} className="link">
                 <div className="img-container">
                   <img src={item.image} alt={item.name} />
                 </div>
