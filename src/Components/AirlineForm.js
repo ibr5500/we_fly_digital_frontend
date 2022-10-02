@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { fetchNewAirlines } from '../redux/airlines/airlines';
+import { addNewAirlines } from '../redux/airlines/airlines';
 
 function AirlineForm() {
   const [airline, setAirline] = useState({
@@ -16,7 +16,7 @@ function AirlineForm() {
       airline: { ...airline },
     };
 
-    dispach(fetchNewAirlines(newAirline));
+    dispach(addNewAirlines(newAirline));
 
     // setAirline({
     //   name: '',

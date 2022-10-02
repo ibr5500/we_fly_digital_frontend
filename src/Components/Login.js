@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const Login = () => {
   const loginInfo = useSelector((state) => state.userInfo.login);
-  console.log(loginInfo);
+  // console.log(loginInfo);
   const [user, setUser] = useState({
     username: '',
     password: '',
@@ -27,7 +27,11 @@ const Login = () => {
       username: '',
       password: '',
     });
-    if (loginInfo.error) navigate('/');
+    if (!loginInfo.error) {
+      setTimeout(() => {
+        navigate('/');
+      }, 2000);
+    }
   };
 
   return (
