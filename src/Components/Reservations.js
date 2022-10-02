@@ -5,12 +5,11 @@ import { fetchUsers } from '../redux/users/userSlice';
 
 function Reservations() {
   const users = useSelector((state) => state.user.users.user);
-  const dispach = useDispatch();
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    dispach(fetchUsers());
-  }, []);
-  // console.log(users);
+    dispatch(fetchUsers());
+  }, [dispatch]);
 
   return (
     <div>

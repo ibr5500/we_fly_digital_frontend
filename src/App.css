@@ -243,10 +243,9 @@ sign up page--------------------------------------------------------------------
 }
 
 .form-intro {
-  border-bottom:solid;
+  border-bottom: solid;
   width: 80%;
   margin: auto;
- 
 }
 
 .form-signin input[type="email"] {

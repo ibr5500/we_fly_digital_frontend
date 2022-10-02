@@ -1,19 +1,18 @@
-import React from 'react';
-// import { useDispatch, useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 // import { Link } from 'react-router-dom';
 import Carousel from 'nuka-carousel/lib/carousel';
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa';
-// import { fetchData } from '../redux/details/details';
+import { fetchData } from '../redux/details/details';
 
 const Home = () => {
-  // const details = useSelector((state) => state.details.data);
-  // const dispach = useDispatch();
+  const details = useSelector((state) => state.details.data);
+  const dispatch = useDispatch();
 
-  // useEffect(() => {
-  //   dispach(fetchData());
-  //   // eslint-disable-next-line
-  // }, []);
-  console.log('hello');
+  useEffect(() => {
+    dispatch(fetchData());
+    // eslint-disable-next-line
+  }, [dispatch]);
 
   return (
     <section className="main">
@@ -36,6 +35,7 @@ const Home = () => {
           }}
         >
           <div className="flights">
+            { details }
             {/* <Link to={`/flight/${item.id}`} className="link">
                 <div className="img-container">
                   <img src={item.image} alt={item.name} />
