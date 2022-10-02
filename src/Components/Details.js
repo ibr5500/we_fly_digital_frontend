@@ -23,6 +23,7 @@ const Details = () => {
               {item.price}
             </h4>
           </div>
+          <button type="button">Book now</button>
         </div>
       ))}
     </div>
