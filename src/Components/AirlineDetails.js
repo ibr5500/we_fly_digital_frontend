@@ -23,7 +23,7 @@ const AirlineDetails = () => {
               {item.price}
             </h4>
           </div>
-          <Link to={`/reservationForm/${item.id}`}>Book now</Link> 
+          <Link to={`/reservationForm/${item.id}`}>Book now</Link>
         </div>
       ))}
     </div>
