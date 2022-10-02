@@ -158,12 +158,9 @@ span i:hover {
   margin: auto;
 }
 
-.img-container img:hover {
-  transform: scale(1.2, 1.2);
-}
-
 .contents {
   color: #ababab;
+  align-items: center;
   font-size: 1.2rem;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -189,13 +186,105 @@ h4 {
   background: none !important;
 }
 
-.carousel {
-  display: grid;
-  grid-auto-flow: column;
-  scroll-behavior: auto;
-  gap: 1.2rem;
-  overflow-y: auto;
-  overscroll-behavior-x: contain;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none;
+/* -------------------------------------------------------------------------------------------------------------------
+sign up page---------------------------------------------------------------------------
+*/
+.form-section {
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-image: url(./airplanes.jpg);
+  background-size: cover;
+  position: fixed;
+  top: 0;
+}
+
+.overlay {
+  width: 100%;
+  position: fixed;
+  height: 100vh;
+  background-color: rgba(151, 191, 25, 0.7);
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 60%;
+  padding: 15px;
+  margin: 10% auto;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-control {
+  border-radius: 20px;
+}
+
+.sign-up {
+  background-color: #97bf19;
+  border-radius: 20px;
+  color: white;
+  border: solid;
+}
+
+.log-in {
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.button-container {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-intro {
+  border-bottom: solid;
+  width: 80%;
+  margin: auto;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+}
+
+/* --------------------------------------------------------
+Details
+----------------------------------------------------------
+*/
+
+.book-btn {
+  background-color: #97bf19;
+  color: #f1f1f1;
+}
+
+.details-container {
+  width: 100%;
+  min-height: 60vh;
+  border: solid 1px whitesmoke;
+  border-radius: 23px;
+  box-shadow: 5px 12px 20px 2px rgba(0, 0, 0, 0.2);
+}
+
+.details-container .contents {
+  min-height: 46vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.details-container img {
+  height: auto;
+  width: 100%;
+}
+
+.details-container .contents > div {
+  width: 80%;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: space-between;
 }
