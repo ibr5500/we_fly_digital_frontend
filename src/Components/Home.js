@@ -6,13 +6,29 @@ import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa';
 import { fetchAirlines } from '../redux/airlines/airlines';
 
 const Home = () => {
-  const data = useSelector((state) => state.airlines.airlines);
+  const dataList = useSelector((state) => state.airlines.airlines.data);
   const dispach = useDispatch();
 
   useEffect(() => {
     dispach(fetchAirlines());
-    // eslint-disable-next-line
-   }, []);
+  }, [dispach]);
+
+  // function reloadPage() {
+  //  // The last "domLoading" Time //
+  //  const currentDocumentTimestamp = new Date(performance.timing.domLoading).getTime();
+  //  // Current Time //
+  //  const now = Date.now();
+  //  // Ten Seconds //
+  //  const tenSec = 10 * 1000;
+  //  // Plus Ten Seconds //
+  //  const plusTenSec = currentDocumentTimestamp + tenSec;
+  //  if (now > plusTenSec) {
+  //    // eslint-disable-next-line
+  //    location.reload();
+  //  }
+  // }
+
+  // reloadPage();
 
   return (
     <section className="main">
@@ -35,14 +51,16 @@ const Home = () => {
           }}
         />
         <div className="flights">
-          {!(data.airlines) ? <p>There are no flight yet!!</p>
-            : data.airlines.map((item) => (
+          {!(dataList) ? <p>There are no flight yet!!</p>
+            : dataList.map((item) => (
               <Link key={item.id} to={`/flight/${item.id}`} className="link">
                 <div className="img-container">
                   <img src={item.image} alt={item.name} />
                 </div>
                 <div className="contents">
                   <h3>{item.name}</h3>
+                  {' '}
+                  {item.id}
                   {' '}
                   ................
                   <h4>

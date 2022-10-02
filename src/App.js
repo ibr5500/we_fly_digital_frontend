@@ -8,6 +8,7 @@ import Reservations from './Components/Reservations';
 import SignUp from './Components/SignUp';
 import Login from './Components/Login';
 import AirlineForm from './Components/AirlineForm';
+import Details from './Components/Details';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       {/* <NavigationPanel /> */}
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/flight/:id" element={<Details />} />
         <Route path="/reserve" element={<BookFlight />} />
         <Route path="/cancelled" element={<DeletedFlights />} />
         <Route path="/reserved" element={<Reservations />} />
