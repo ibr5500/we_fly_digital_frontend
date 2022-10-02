@@ -19,12 +19,12 @@ const AirlineDetails = () => {
             <img src={item.image} alt={item.name} />
           </div>
           <div className="contents p-5">
-            <div className="p-2">
+            <div className="p-3">
               <p>Name: </p>
               <h3>{item.name}</h3>
             </div>
 
-            <div className="p-2 my-2">
+            <div className="p-3 my-2">
               <p>Price: $</p>
               {' '}
               <h4>{item.price}</h4>
