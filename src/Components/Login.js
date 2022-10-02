@@ -1,26 +1,32 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { fetchCurrentUser } from '../redux/users/registerSlice';
 
 const Login = () => {
+  const loginInfo = useSelector((state) => state.userInfo.login);
+  console.log(loginInfo);
   const [user, setUser] = useState({
     username: '',
     password: '',
   });
   const dispach = useDispatch();
+  const navigate = useNavigate();
 
   const handleUserLogin = (e) => {
     e.preventDefault(e);
+    if (!user.username || !user.password) alert('Fill up the form!');
+
     const currentUser = {
       user: { ...user },
     };
-
     dispach(fetchCurrentUser(currentUser));
 
     setUser({
       username: '',
       password: '',
     });
+    if (loginInfo.error) navigate('/');
   };
 
   return (

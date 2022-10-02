@@ -1,7 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { createLogger } from 'redux-logger';
 import registerReducer from './users/registerSlice';
-// import loginReducer from './users/loginSlice';
 import airlineReducer from './airlines/airlines';
 
 const logger = createLogger();
