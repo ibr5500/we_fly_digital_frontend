@@ -5,7 +5,7 @@ import { fetchCurrentUser } from '../redux/users/registerSlice';
 
 const Login = () => {
   const loginInfo = useSelector((state) => state.userInfo.login);
-  // console.log(loginInfo);
+
   const [user, setUser] = useState({
     username: '',
     password: '',
@@ -15,7 +15,7 @@ const Login = () => {
 
   const handleUserLogin = (e) => {
     e.preventDefault(e);
-    if (!user.username || !user.password) alert('Fill up the form!');
+    if (!user.username || !user.password) alert('Fill up the form!'); // eslint-disable-line
 
     const currentUser = {
       user: { ...user },
