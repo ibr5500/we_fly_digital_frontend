@@ -5,9 +5,7 @@ import { Link, useParams } from 'react-router-dom';
 const AirlineDetails = () => {
   const airline = useParams();
   const dataList = useSelector((state) => state.airlines.airlines.data);
-  const airlineDetails = dataList.filter(
-    (flight) => +flight.id === +airline.id,
-  );
+  const airlineDetails = dataList.filter((flight) => +flight.id === +airline.id);
 
   return (
     <div className="container my-5
@@ -29,9 +27,8 @@ const AirlineDetails = () => {
               {' '}
               <h4>{item.price}</h4>
             </div>
-            <Link className="btn book-btn my-2" to="/reservationForm">Book now</Link>
+            <Link className="btn book-btn my-2" to={`/reservationForm/${item.id}`}>Book now</Link>
           </div>
-          <Link to={`/reservationForm/${item.id}`}>Book now</Link>
         </div>
       ))}
     </div>
