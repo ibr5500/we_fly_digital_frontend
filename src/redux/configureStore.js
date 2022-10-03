@@ -1,16 +1,14 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { createLogger } from 'redux-logger';
-// import userReducer from './users/userSlice';
 import registerReducer from './users/registerSlice';
-import loginReducer from './users/loginSlice';
+import airlineReducer from './airlines/airlines';
 
 const logger = createLogger();
 
 const store = configureStore({
   reducer: {
-    // user: userReducer,
-    register: registerReducer,
-    login: loginReducer,
+    airlines: airlineReducer,
+    userInfo: registerReducer,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 });

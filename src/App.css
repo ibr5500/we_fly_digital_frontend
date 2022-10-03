@@ -158,12 +158,9 @@ span i:hover {
   margin: auto;
 }
 
-.img-container img:hover {
-  transform: scale(1.2, 1.2);
-}
-
 .contents {
   color: #ababab;
+  align-items: center;
   font-size: 1.2rem;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -254,4 +251,40 @@ sign up page--------------------------------------------------------------------
 
 .form-signin input[type="password"] {
   margin-bottom: 10px;
+}
+
+/* --------------------------------------------------------
+Details
+----------------------------------------------------------
+*/
+
+.book-btn {
+  background-color: #97bf19;
+  color: #f1f1f1;
+}
+
+.details-container {
+  width: 100%;
+  min-height: 60vh;
+  border: solid 1px whitesmoke;
+  border-radius: 23px;
+  box-shadow: 5px 12px 20px 2px rgba(0, 0, 0, 0.2);
+}
+
+.details-container .contents {
+  min-height: 46vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.details-container img {
+  height: auto;
+  width: 100%;
+}
+
+.details-container .contents > div {
+  width: 80%;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: space-between;
 }

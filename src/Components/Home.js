@@ -1,18 +1,16 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-// import { Link } from 'react-router-dom';
-import Carousel from 'nuka-carousel/lib/carousel';
-import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa';
-import { fetchData } from '../redux/details/details';
+// import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa';
+import { fetchAirlines } from '../redux/airlines/airlines';
+import Airline from './Airline';
 
 const Home = () => {
-  const details = useSelector((state) => state.details.data);
-  const dispatch = useDispatch();
+  const dataList = useSelector((state) => state.airlines.airlines.data);
+  const dispach = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchData());
-    // eslint-disable-next-line
-  }, [dispatch]);
+    dispach(fetchAirlines());
+  }, [dispach]);
 
   return (
     <section className="main">
@@ -21,37 +19,18 @@ const Home = () => {
         <p>Please book a flight from the following list</p>
       </div>
       <div className="container">
-        <Carousel
-          wrapAround={1}
-          slidesToShow={3}
-          adaptiveHeight={1}
-          dragging={0}
-          defaultControlsConfig={{
-            prevButtonText: <FaArrowAltCircleLeft className="icon" />,
-            nextButtonText: <FaArrowAltCircleRight className="icon" />,
-            pagingDotsStyle: {
-              display: 'none',
-            },
-          }}
-        >
-          <div className="flights">
-            { details }
-            {/* <Link to={`/flight/${item.id}`} className="link">
-                <div className="img-container">
-                  <img src={item.image} alt={item.name} />
-                </div>
-                <div className="contents">
-                  <h3>{item.name}</h3>
-                  {' '}
-                  ................
-                  <h4>
-                    Price: $
-                    {item.price}
-                  </h4>
-                </div>
-              </Link> */}
-          </div>
-        </Carousel>
+        <div className="flights">
+          {!(dataList) ? <p>There are no flight yet!!</p>
+            : dataList.map((item) => (
+              <Airline
+                key={item.id}
+                id={item.id}
+                image={item.image}
+                airlineName={item.name}
+                price={item.price}
+              />
+            ))}
+        </div>
       </div>
     </section>
   );
