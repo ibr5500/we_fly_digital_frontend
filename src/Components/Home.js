@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import Carousel from 'nuka-carousel/lib/carousel';
-import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa';
+// import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa';
 import { fetchAirlines } from '../redux/airlines/airlines';
 
 const Home = () => {
@@ -20,19 +19,6 @@ const Home = () => {
         <p>Please book a flight from the following list</p>
       </div>
       <div className="container">
-        <Carousel
-          wrapAround={1}
-          slidesToShow={3}
-          adaptiveHeight={1}
-          dragging={0}
-          defaultControlsConfig={{
-            prevButtonText: <FaArrowAltCircleLeft className="icon" />,
-            nextButtonText: <FaArrowAltCircleRight className="icon" />,
-            pagingDotsStyle: {
-              display: 'none',
-            },
-          }}
-        />
         <div className="flights">
           {!(dataList) ? <p>There are no flight yet!!</p>
             : dataList.map((item) => (
