@@ -2,7 +2,6 @@ import { Routes, Route } from 'react-router-dom';
 import './App.css';
 // import NavigationPanel from './Components/NavigationPanel';
 import Home from './Components/Home';
-import BookFlight from './Components/BookFlight';
 import DeletedFlights from './Components/DeletedFlights';
 import Reservations from './Components/Reservations';
 import SignUp from './Components/SignUp';
@@ -22,8 +21,7 @@ function App() {
         <Route path="/airline/:id" element={<AirlineDetails />} />
         <Route path="/cancelled" element={<DeletedFlights />} />
         <Route path="/airlineForm" element={<AirlineForm />} />
-        <Route path="/reserved" element={<Reservations />} />
-        <Route path="/reserve" element={<BookFlight />} />
+        <Route path="/reservations" element={<Reservations />} />
         <Route path="/reservationForm/:id" element={<ReservationForm />} />
       </Routes>
     </div>
