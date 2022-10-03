@@ -158,10 +158,6 @@ span i:hover {
   margin: auto;
 }
 
-.img-container img:hover {
-  transform: scale(1.2, 1.2);
-}
-
 .contents {
   color: #ababab;
   align-items: center;
