@@ -19,7 +19,7 @@ function App() {
         <Route path="/signUp" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
         <Route path="/airline/:id" element={<AirlineDetails />} />
-        <Route path="/cancelled" element={<DeletedFlights />} />
+        <Route path="/delete_flight" element={<DeletedFlights />} />
         <Route path="/airlineForm" element={<AirlineForm />} />
         <Route path="/reservations" element={<Reservations />} />
         <Route path="/reservationForm/:id" element={<ReservationForm />} />

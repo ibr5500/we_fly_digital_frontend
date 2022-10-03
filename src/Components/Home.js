@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-// import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa';
 import { fetchAirlines } from '../redux/airlines/airlines';
 
 const Home = () => {
@@ -40,7 +39,6 @@ const Home = () => {
               </Link>
             ))}
         </div>
-
       </div>
     </section>
   );
