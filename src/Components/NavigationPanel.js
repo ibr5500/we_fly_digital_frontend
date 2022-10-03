@@ -38,12 +38,12 @@ function NavigationPanel() {
             <Link onClick={() => toggleActiveNav(!NavIsActive)} to="/reserve">Add Flight</Link>
           </li>
           <li className={isActive ? 'active-link' : ''}>
-            <Link onClick={() => toggleActiveNav(!NavIsActive)} to="/cancelled">Cancelled Flight</Link>
+            <Link onClick={() => toggleActiveNav(!NavIsActive)} to="/delete_flight">Cancelled Flight</Link>
           </li>
 
           <li className={isActive ? 'active-link' : ''}>
             {' '}
-            <Link onClick={() => toggleActiveNav(!NavIsActive)} to="/reserved">Reservations</Link>
+            <Link onClick={() => toggleActiveNav(!NavIsActive)} to="/reservations">Reservations</Link>
           </li>
 
           <li className={isActive ? 'active-link' : ''}>

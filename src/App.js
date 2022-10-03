@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
-// import NavigationPanel from './Components/NavigationPanel';
+import NavigationPanel from './Components/NavigationPanel';
 import Home from './Components/Home';
 import DeletedFlights from './Components/DeletedFlights';
 import Reservations from './Components/Reservations';
@@ -13,14 +13,14 @@ import AirlineDetails from './Components/AirlineDetails';
 function App() {
   return (
     <div>
-      {/* <NavigationPanel /> */}
+      <NavigationPanel />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signUp" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/airline/:id" element={<AirlineDetails />} />
+        <Route path="/flight/:id" element={<AirlineDetails />} />
         <Route path="/delete_flight" element={<DeletedFlights />} />
-        <Route path="/airlineForm" element={<AirlineForm />} />
+        <Route path="/reserve" element={<AirlineForm />} />
         <Route path="/reservations" element={<Reservations />} />
         <Route path="/reservationForm/:id" element={<ReservationForm />} />
       </Routes>
