@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { fetchNewUser } from '../redux/users/registerSlice';
 
 function SignUp() {
+  const navigate = useNavigate();
   const [newuser, setNewuser] = useState({
     fullname: '',
     username: '',
@@ -26,6 +27,7 @@ function SignUp() {
       email: '',
       password: '',
     });
+    navigate('/');
   };
 
   return (
@@ -90,9 +92,9 @@ function SignUp() {
             </div>
             <div className="button-container w-50">
 
-              <Link to="/signup" className="btn sign-up my-2">
+              <button type="submit" className="btn sign-up my-2">
                 SignUp
-              </Link>
+              </button>
               <Link to="/login" className="btn log-in">
                 Login
               </Link>
