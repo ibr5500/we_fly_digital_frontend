@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { addNewReservations } from '../redux/reservations/reservations';
 
 function ReservationForm() {
   const airlineParams = useParams();
   const dispach = useDispatch();
+  const navigate = useNavigate();
   const [reservations, setReservations] = useState({
     city: 'airline',
     date: '',
@@ -18,6 +19,9 @@ function ReservationForm() {
       reservation: { ...reservations },
     };
     dispach(addNewReservations(newReservation));
+
+    const reserveNavigate = () => (reservations.date ? navigate('/reservations') : alert('Kindly, add a date!'));
+    reserveNavigate();
 
     setReservations({
       date: '',

@@ -27,7 +27,7 @@ function AirlineForm() {
 
   return (
     <section>
-      <h2>Add New Flight</h2>
+      <h2>Add New Airline</h2>
       <form onSubmit={handleNewAirline}>
         <input type="text" value={airline.name} onChange={(e) => setAirline({ ...airline, name: e.target.value })} placeholder="Name" />
         <input type="text" value={airline.image} onChange={(e) => setAirline({ ...airline, image: e.target.value })} placeholder="Image" />
