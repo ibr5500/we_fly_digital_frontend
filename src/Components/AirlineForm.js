@@ -26,11 +26,11 @@ function AirlineForm() {
       image: '',
     });
 
-    setTimeout(() => {
-      navigate('/');
-    }, 1000);
-
-    console.log(airline);
+    if (airline.name && airline.image && airline.price) {
+      setTimeout(() => {
+        navigate('/');
+      }, 1000);
+    }
   };
 
   return (
