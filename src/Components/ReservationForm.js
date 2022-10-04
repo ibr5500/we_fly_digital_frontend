@@ -24,13 +24,13 @@ function ReservationForm() {
       date: '',
       city: '',
     });
-  };
 
-  if (reservations.date) {
-    setTimeout(() => {
-      navigate('/reservations');
-    }, 1000);
-  }
+    if (reservations.date && reservations.city) {
+      setTimeout(() => {
+        navigate('/reservations');
+      }, 1000);
+    }
+  };
 
   return (
     <section className="form-section bg-lime-500 ">
@@ -61,7 +61,7 @@ function ReservationForm() {
                   className="form-control py-2  px-4 "
                   type="text"
                   value={reservations.city}
-                  onChange={(e) => setUser({ ...reservations, city: e.target.value })}
+                  onChange={(e) => setReservations({ ...reservations, city: e.target.value })}
                   placeholder="City"
                 />
               </label>
