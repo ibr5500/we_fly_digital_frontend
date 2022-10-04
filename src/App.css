@@ -91,8 +91,12 @@ span i:hover {
   }
 
   @keyframes toggleNavpanel {
-    from { left: -296px; }
-    to { left: -296px; }
+    from {
+      left: -296px;
+    }
+    to {
+      left: -296px;
+    }
   }
 
   /* The element to apply the animation to */
@@ -245,11 +249,11 @@ sign up page--------------------------------------------------------------------
   margin: auto;
 }
 
-.form-signin input[type="email"] {
+.form-signin input[type='email'] {
   margin-bottom: -1px;
 }
 
-.form-signin input[type="password"] {
+.form-signin input[type='password'] {
   margin-bottom: 10px;
 }
 
@@ -294,18 +298,14 @@ Airline styles
 
 -------------------------------------------------------------- */
 
-.reservation{
-  position: absolute;
+.reservation {
+ 
   display: flex;
-  border: solid;
-  margin: auto;
+ 
   flex-direction: column;
   align-items: center;
-  right: 10%;
-  width: 40%;
-  max-width: 50%;
-}
 
+}
 
 .add-airline {
   position: absolute;
@@ -316,3 +316,29 @@ Airline styles
   right: 10%;
   max-width: 69%;
 }
+
+.details-reservation-container {
+  display: grid;
+  grid-template-columns: auto;
+  margin: auto 2%;
+  gap:2%;
+  position: relative;
+  width: 70vw;
+  
+}
+
+.reserve-item{
+  text-align: start;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.reserve-item:nth-child(even){
+  background-color: #F8F9FA;
+
+}
+
+
+
+
