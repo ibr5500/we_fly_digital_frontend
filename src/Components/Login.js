@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { fetchCurrentUser } from '../redux/users/registerSlice';
 
 const Login = () => {
   const loginInfo = useSelector((state) => state.userInfo.login);
   const dispach = useDispatch();
-  // const navigate = useNavigate();
-  console.log(sessionStorage.getItem('loginToken'));
+  const navigate = useNavigate();
+  //  console.log(sessionStorage.getItem('loginToken'));
   const [user, setUser] = useState({
     username: '',
     password: '',
@@ -27,18 +27,12 @@ const Login = () => {
       password: '',
     });
 
-    // setTimeout(() => {
-    //   if (loginInfo) {
-    //     if (!loginInfo.error) {
-    //       navigate('/');
-    //     }
-    //   }
-    // }, 1000);
+    if (!loginInfo.error) {
+      setTimeout(() => {
+        navigate('/home');
+      }, 1000);
+    }
   };
-
-  if (loginInfo.user) {
-    return <Navigate replace to="/" />;
-  }
 
   return (
     <section className="form-section bg-lime-500 ">

@@ -36,13 +36,13 @@ function NavigationPanel() {
 
         <ul className="panel-links">
           <li className={isActive ? 'active-link' : ''}>
-            <Link to="/">Home</Link>
+            <Link to="/home">Home</Link>
           </li>
           <li className={isActive ? 'active-link' : ''}>
             <Link onClick={() => toggleActiveNav(!NavIsActive)} to="/airlineForm">Add Flight</Link>
           </li>
           <li className={isActive ? 'active-link' : ''}>
-            <Link onClick={() => toggleActiveNav(!NavIsActive)} to="/cancelled">Cancelled Flight</Link>
+            <Link onClick={() => toggleActiveNav(!NavIsActive)} to="/delete_flight">Delete Flight</Link>
           </li>
 
           <li className={isActive ? 'active-link' : ''}>
@@ -52,7 +52,7 @@ function NavigationPanel() {
 
           <li className={isActive ? 'active-link' : ''}>
             {' '}
-            <Link onClick={handleSignOut} to="/login">SignOut</Link>
+            <Link onClick={handleSignOut} to="/">SignOut</Link>
           </li>
         </ul>
         <ul className="social-links">

@@ -11,29 +11,20 @@ import ReservationForm from './Components/ReservationForm';
 import AirlineDetails from './Components/AirlineDetails';
 
 function App() {
-  if (sessionStorage.getItem('loginToken')) {
-    return (
-      <div>
-        <NavigationPanel />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/airline/:id" element={<AirlineDetails />} />
-          <Route path="/cancelled" element={<DeletedFlights />} />
-          <Route path="/airlineForm" element={<AirlineForm />} />
-          <Route path="/reservations" element={<Reservations />} />
-          <Route path="/reservationForm/:id" element={<ReservationForm />} />
-        </Routes>
-      </div>
-    );
-  } return (
-    <>
-      <Login />
+  return (
+    <div>
+      {(sessionStorage.getItem('loginToken')) ? <NavigationPanel /> : null }
       <Routes>
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/airline/:id" element={<AirlineDetails />} />
+        <Route path="/delete_flight" element={<DeletedFlights />} />
+        <Route path="/airlineForm" element={<AirlineForm />} />
+        <Route path="/reservations" element={<Reservations />} />
+        <Route path="/reservationForm/:id" element={<ReservationForm />} />
+        <Route path="/signUp" element={<SignUp />} />
       </Routes>
-    </>
+    </div>
   );
 }
 
