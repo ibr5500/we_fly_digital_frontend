@@ -95,6 +95,7 @@ span i:hover {
     from {
       left: -296px;
     }
+
     to {
       left: -296px;
     }
@@ -299,12 +300,9 @@ Airline styles
 -------------------------------------------------------------- */
 
 .reservation {
- 
   display: flex;
- 
   flex-direction: column;
   align-items: center;
-
 }
 
 .add-airline {
@@ -321,28 +319,22 @@ Airline styles
   display: grid;
   grid-template-columns: auto;
   margin: auto 2%;
-  gap:2%;
+  gap: 2%;
   position: relative;
   width: 70vw;
-  
 }
 
-.reserve-item{
+.reserve-item {
   text-align: start;
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
 
-.reserve-item:nth-child(even){
-  background-color: #F8F9FA;
-
+.reserve-item:nth-child(even) {
+  background-color: #f8f9fa;
 }
 
-
-.cancelled-flights{
+.cancelled-flights {
   min-height: 23vh;
 }
-
-
-
