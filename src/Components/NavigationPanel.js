@@ -39,7 +39,7 @@ function NavigationPanel() {
             <Link to="/">Home</Link>
           </li>
           <li className={isActive ? 'active-link' : ''}>
-            <Link onClick={() => toggleActiveNav(!NavIsActive)} to="/reserve">Add Flight</Link>
+            <Link onClick={() => toggleActiveNav(!NavIsActive)} to="/airlineForm">Add Flight</Link>
           </li>
           <li className={isActive ? 'active-link' : ''}>
             <Link onClick={() => toggleActiveNav(!NavIsActive)} to="/delete_flight">Cancelled Flight</Link>
