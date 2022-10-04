@@ -8,7 +8,7 @@ function ReservationForm() {
   const dispach = useDispatch();
   const navigate = useNavigate();
   const [reservations, setReservations] = useState({
-    city: 'airline',
+    city: '',
     date: '',
     airline_id: airlineParams.id,
   });
@@ -20,13 +20,17 @@ function ReservationForm() {
     };
     dispach(addNewReservations(newReservation));
 
-    const reserveNavigate = () => (reservations.date ? navigate('/reservations') : alert('Kindly, add a date!'));
-    reserveNavigate();
-
     setReservations({
       date: '',
+      city: '',
     });
   };
+
+  if (reservations.date) {
+    setTimeout(() => {
+      navigate('/reservations');
+    }, 1000);
+  }
 
   return (
     <section className="form-section bg-lime-500 ">
@@ -50,18 +54,18 @@ function ReservationForm() {
               </label>
             </div>
 
-            {/* <div className="input-floor">
-              <label htmlFor="password-input" className="w-100 my-2">
+            <div className="input-floor">
+              <label htmlFor="city-input" className="w-100 my-2">
                 <input
-                  id="password-input"
+                  id="city-input"
                   className="form-control py-2  px-4 "
-                  type="password"
-                value={user.password}
-                onChange={(e) => setUser({ ...user, password: e.target.value })}
-                  placeholder="Password"
+                  type="text"
+                  value={reservations.city}
+                  onChange={(e) => setUser({ ...reservations, city: e.target.value })}
+                  placeholder="City"
                 />
               </label>
-            </div> */}
+            </div>
 
             <div className="button-container w-50">
               <button type="submit" className="btn sign-up">
