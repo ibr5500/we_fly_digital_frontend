@@ -5,7 +5,6 @@ import { fetchCurrentUser } from '../redux/users/registerSlice';
 
 const Login = () => {
   const loginInfo = useSelector((state) => state.userInfo.login);
-
   const [user, setUser] = useState({
     username: '',
     password: '',
