@@ -16,21 +16,23 @@ const DeletedFlights = () => {
   };
 
   return (
-    <section className="main">
+    <section className="add-airline container ">
       <div className="header">
         <h2>Flights list:</h2>
-        <p>Please book a flight from the following list</p>
+        <p>Want to cancel? please pic a flight from the following list</p>
       </div>
-      <div className="container">
+      <div className="">
         <div className="flights">
-          {!(dataList) ? <p>There are no flight yet!!</p>
-            : dataList.map((item) => (
-              <div key={item.id}>
+          {!dataList ? (
+            <p>There are no flight yet!!</p>
+          ) : (
+            dataList.map((item) => (
+              <div className="mb-3 details-container " key={item.id}>
                 <Link to={`/airline/${item.id}`} className="link">
                   <div className="img-container">
                     <img src={item.image} alt={item.name} />
                   </div>
-                  <div className="contents">
+                  <div className="cancelled-flights">
                     <h3>{item.name}</h3>
                     {' '}
                     {item.id}
@@ -42,9 +44,16 @@ const DeletedFlights = () => {
                     </h4>
                   </div>
                 </Link>
-                <button type="button" onClick={() => handleClick(item.id)}>Delete</button>
+                <button
+                  className="btn btn-warning"
+                  type="button"
+                  onClick={() => handleClick(item.id)}
+                >
+                  Delete
+                </button>
               </div>
-            ))}
+            ))
+          )}
         </div>
       </div>
     </section>
