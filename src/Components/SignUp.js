@@ -94,7 +94,7 @@ function SignUp() {
               <button type="submit" className="btn sign-up my-2">
                 SignUp
               </button>
-              <Link to="/login" className="btn log-in">
+              <Link to="/" className="btn log-in">
                 Login
               </Link>
 

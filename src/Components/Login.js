@@ -7,7 +7,7 @@ const Login = () => {
   const loginInfo = useSelector((state) => state.userInfo.login);
   const dispach = useDispatch();
   const navigate = useNavigate();
-  //  console.log(sessionStorage.getItem('loginToken'));
+  console.log(loginInfo);
   const [user, setUser] = useState({
     username: '',
     password: '',
@@ -30,6 +30,7 @@ const Login = () => {
     if (!loginInfo.error) {
       setTimeout(() => {
         navigate('/home');
+        window.location.reload(false);
       }, 1000);
     }
   };

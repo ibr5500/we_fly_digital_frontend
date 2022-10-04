@@ -8,6 +8,7 @@ function NavigationPanel() {
 
   const handleSignOut = () => {
     sessionStorage.removeItem('loginToken');
+    window.location.reload(false);
   };
 
   return (
