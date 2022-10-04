@@ -288,3 +288,31 @@ Details
   display: flex;
   justify-content: space-between;
 }
+
+/* ------------------------------------------------------------------------------------------------------------------------------
+Airline styles
+
+-------------------------------------------------------------- */
+
+.reservation{
+  position: absolute;
+  display: flex;
+  border: solid;
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
+  right: 10%;
+  width: 40%;
+  max-width: 50%;
+}
+
+
+.add-airline {
+  position: absolute;
+  display: flex;
+  margin: 6% auto;
+  flex-direction: column;
+  align-items: center;
+  right: 10%;
+  max-width: 69%;
+}
