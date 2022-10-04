@@ -6,6 +6,10 @@ function NavigationPanel() {
   const [NavIsActive, toggleActiveNav] = useState(false);
   const isActive = true;
 
+  const handleSignOut = () => {
+    sessionStorage.removeItem('loginToken');
+  };
+
   return (
     <>
       <aside className={NavIsActive ? 'nav-panel hidden' : 'nav-panel'}>
@@ -48,9 +52,8 @@ function NavigationPanel() {
 
           <li className={isActive ? 'active-link' : ''}>
             {' '}
-            <Link onClick={() => toggleActiveNav(!NavIsActive)} to="/signUp">SignUp</Link>
+            <Link onClick={handleSignOut} to="/login">SignOut</Link>
           </li>
-          <li>Sign Out</li>
         </ul>
         <ul className="social-links">
           <li>
