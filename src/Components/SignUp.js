@@ -36,16 +36,15 @@ function SignUp() {
         <div className="form-signin">
           <div className="form-intro p-1 my-2 text-white text-center ">
             <h1>REGISTER</h1>
-            {/* <hr className="px-2" /> */}
           </div>
           <form
             onSubmit={handleRegisterSubmit}
             className="flex flex-col gap-5 items-center "
           >
             <div className="input-floor">
-              <label htmlFor="name-input" className="w-100 my-2">
+              <label htmlFor="fullname-input" className="w-100 my-2">
                 <input
-                  id="name-input"
+                  id="fullname-input"
                   className="form-control py-2  px-4 "
                   type="text"
                   value={newuser.fullname}

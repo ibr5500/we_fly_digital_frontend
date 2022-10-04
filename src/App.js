@@ -17,7 +17,6 @@ function App() {
         <NavigationPanel />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/signUp" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
           <Route path="/airline/:id" element={<AirlineDetails />} />
           <Route path="/cancelled" element={<DeletedFlights />} />
@@ -27,7 +26,15 @@ function App() {
         </Routes>
       </div>
     );
-  } return <Login />;
+  } return (
+    <>
+      <Login />
+      <Routes>
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
+    </>
+  );
 }
 
 export default App;
