@@ -11,21 +11,23 @@ import ReservationForm from './Components/ReservationForm';
 import AirlineDetails from './Components/AirlineDetails';
 
 function App() {
-  return (
-    <div>
-      <NavigationPanel />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/signUp" element={<SignUp />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/flight/:id" element={<AirlineDetails />} />
-        <Route path="/delete_flight" element={<DeletedFlights />} />
-        <Route path="/reserve" element={<AirlineForm />} />
-        <Route path="/reservations" element={<Reservations />} />
-        <Route path="/reservationForm/:id" element={<ReservationForm />} />
-      </Routes>
-    </div>
-  );
+  if (sessionStorage.getItem('loginToken')) {
+    return (
+      <div>
+        <NavigationPanel />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/signUp" element={<SignUp />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/airline/:id" element={<AirlineDetails />} />
+          <Route path="/cancelled" element={<DeletedFlights />} />
+          <Route path="/airlineForm" element={<AirlineForm />} />
+          <Route path="/reservations" element={<Reservations />} />
+          <Route path="/reservationForm/:id" element={<ReservationForm />} />
+        </Routes>
+      </div>
+    );
+  } return <Login />;
 }
 
 export default App;

@@ -6,7 +6,7 @@ const Airline = ({
   id, image, airlineName, price,
 }) => (
   <div>
-    <Link key={id} to={`/flight/${id}`} className="link">
+    <Link key={id} to={`/airline/${id}`} className="link">
       <div className="img-container">
         <img src={image} alt={airlineName} />
       </div>
