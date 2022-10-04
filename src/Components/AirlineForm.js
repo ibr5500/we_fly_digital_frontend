@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { addNewAirlines } from '../redux/airlines/airlines';
 
 function AirlineForm() {
+  const dispach = useDispatch();
+  const navigate = useNavigate();
   const [airline, setAirline] = useState({
     name: '',
     price: '',
     image: '',
   });
-  const dispach = useDispatch();
 
   const handleNewAirline = (e) => {
     e.preventDefault(e);
@@ -18,11 +20,17 @@ function AirlineForm() {
 
     dispach(addNewAirlines(newAirline));
 
-    // setAirline({
-    //   name: '',
-    //   price: '',
-    //   image: '',
-    // });
+    setAirline({
+      name: '',
+      price: '',
+      image: '',
+    });
+
+    setTimeout(() => {
+      navigate('/');
+    }, 1000);
+
+    console.log(airline);
   };
 
   return (
