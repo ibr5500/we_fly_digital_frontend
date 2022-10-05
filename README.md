@@ -10,8 +10,8 @@ Check out the [API documentation](https://flight-digital.herokuapp.com/api-docs/
 
 ## Project Documentation 📄
 
-- [x] Here is the deployed of back end [Heroku]()👈
-- [x] Here is the deployed of front end [Netlify]()👈
+- [x] Here is the deployed of back end [Heroku](https://flight-digital.herokuapp.com/)👈
+- [x] Here is the deployed of front end [Heroku](https://we-fly-digital.herokuapp.com/)👈
 
 ## Kanban board 
 
