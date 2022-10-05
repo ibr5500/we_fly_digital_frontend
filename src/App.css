@@ -95,6 +95,12 @@ span i:hover {
     right: 0;
   }
 
+
+  .details-container{
+        width: 100%;
+        position: absolute;
+        left: 13%;
+  }
   @keyframes toggleNavpanel {
     from {
       left: -296px;
@@ -328,12 +334,6 @@ Airline styles
   width: 70vw;
 }
 
-.reserve-item {
-  /* text-align: start;
-  display: flex;
-  justify-content: space-between;
-  width: 100%; */
-}
 
 .reserve-item:nth-child(even) {
   background-color: #f8f9fa;
