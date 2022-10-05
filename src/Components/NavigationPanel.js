@@ -11,7 +11,7 @@ function NavigationPanel() {
 
   const handleSignOut = () => {
     sessionStorage.removeItem('loginToken');
-    window.location.reload(false);
+    window.reload();
   };
 
   return (
@@ -33,7 +33,7 @@ function NavigationPanel() {
         </button>
 
         <div className="header__logo">
-          <Link to="/">
+          <Link to="/home">
             {' '}
             <img src={logo} alt="logo" />
           </Link>
