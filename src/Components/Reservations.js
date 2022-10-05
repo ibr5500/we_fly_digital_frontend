@@ -42,7 +42,7 @@ function Reservations() {
 
             {reserveInfo.reservations ? (
               reserveInfo.reservations.map((item) => (
-                
+
                 <tr className="reserve-item" key={item.reservation.id}>
                   <th scope="row">
                     <p>{item.airline.name}</p>

@@ -12,7 +12,7 @@ ul {
   border-right: solid 2px #f1f1f1;
 }
 
-.nav-toggle{
+.nav-toggle {
   color: black;
 }
 
@@ -95,12 +95,12 @@ span i:hover {
     right: 0;
   }
 
-
-  .details-container{
-        width: 100%;
-        position: absolute;
-        left: 13%;
+  .details-container {
+    width: 100%;
+    position: absolute;
+    left: 13%;
   }
+
   @keyframes toggleNavpanel {
     from {
       left: -296px;
@@ -333,7 +333,6 @@ Airline styles
   position: relative;
   width: 70vw;
 }
-
 
 .reserve-item:nth-child(even) {
   background-color: #f8f9fa;
