@@ -20,26 +20,51 @@ function Reservations() {
           Travel the world with us
         </p>
       </div>
-      <div className="details-reservation-container">
-        <div className="reserve-item">
-          <h4>Airline</h4>
-          <h4>City</h4>
-          <h4>Date</h4>
-          <h4>Price</h4>
-        </div>
+      <div className="details-reservation-container table-responsive">
+        <table className="table">
+          <thead>
+            <tr className="reserve-item">
+              <th scope="col">
+                <h4>Airline</h4>
+              </th>
+              <th scope="col">
+                <h4>City</h4>
+              </th>
+              <th scope="col">
+                <h4>Date</h4>
+              </th>
+              <th scope="col">
+                <h4>Price</h4>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
 
-        {reserveInfo.reservations ? (
-          reserveInfo.reservations.map((item) => (
-            <div className="reserve-item" key={item.reservation.id}>
-              <p>{item.airline.name}</p>
-              <p>{item.reservation.city}</p>
-              <p>{item.reservation.date}</p>
-              <p>{item.airline.price}</p>
-            </div>
-          ))
-        ) : (
-          <h2>You have no reservations!</h2>
-        )}
+            {reserveInfo.reservations ? (
+              reserveInfo.reservations.map((item) => (
+                
+                <tr className="reserve-item" key={item.reservation.id}>
+                  <th scope="row">
+                    <p>{item.airline.name}</p>
+                  </th>
+                  <td>
+                    <p>{item.reservation.city}</p>
+                  </td>
+
+                  <td>
+                    <p>{item.reservation.date}</p>
+                  </td>
+
+                  <td>
+                    <p>{item.airline.price}</p>
+                  </td>
+                </tr>
+              ))
+            ) : (
+              <h2>You have no reservations!</h2>
+            )}
+          </tbody>
+        </table>
       </div>
     </section>
   );
