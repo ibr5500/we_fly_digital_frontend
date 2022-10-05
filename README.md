@@ -1,70 +1,129 @@
-# Getting Started with Create React App
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# We Fly Digital
 
-## Available Scripts
+> We Fly Digital is a responsive app that lists flight reservations. A user can selects a specific airline, see the details page with its full description, and can click the "Reserve" button to reserve it. The user can also access the "Reserve" page from the navigation panel, add or delete a reservation or airline.
 
-In the project directory, you can run:
 
-### `npm start`
+## API Documentation
+Check out the [API documentation]()
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Project Documentation 📄
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [x] Here is the deployed of back end [Heroku]()👈
+- [x] Here is the deployed of front end [Netlify]()👈
 
-### `npm test`
+## Kanban board 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [x] [Link to the initial state of our Kanban board](https://user-images.githubusercontent.com/86069740/194050526-743a478f-d217-40b3-ae1d-11708bd5e355.png)
+- [x] [Link to the final state of our Kanban board](https://github.com/users/ibr5500/projects/6)
 
-### `npm run build`
+### ERD diagram
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Screenshot from 2022-10-05 10-32-43](https://user-images.githubusercontent.com/86069740/194005586-9b6bced6-eca9-41ec-b2f4-7ece0cd23615.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Back-End Repo 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [x] [We Fly Digital]()
 
-### `npm run eject`
+## Built With 🛠️
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- [x] Programming Language: [Ruby](https://www.ruby-lang.org/en/)
+- [x] Framework: [Ruby on Rails](https://rubyonrails.org/)
+- [x] Linter: [Rubocop](https://rubocop.org/)
+- [x] Code Editor: [VS Code](https://code.visualstudio.com/)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Getting Started
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To get a local copy up and running follow these simple steps.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Prerequisites
 
-## Learn More
+- [x] A web browser like Google Chrome.
+- [x] A code editor like Visual Studio Code with Git and Ruby.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+You can check if Git is installed by running the following command in the terminal.
+```
+$ git --version
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Likewise for Ruby installation.
+```
+$ ruby --version && irb
+```
 
-### Code Splitting
+To install rails, in the terminal kindly run this command
+```
+$ gem install rails
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Setup
 
-### Analyzing the Bundle Size
+Clone the repository using the GitHub link provided below.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## installation
 
-### Making a Progressive Web App
+To get a local copy up and running follow these simple example steps.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- clone the repository by running: git@github.com:ibr5500/flight_reservation-backend.git
 
-### Advanced Configuration
+- setup rails app
+``` rails . my_api --api --database=postgresql```
+- navigate to the folder
+  ``` cd <DIRECTORY> ```
+- Install packages
+  ``` npm i ```
+- Run the app
+```sh
+# Load the schema
+rails db:schema:load
+# Create the database
+rake db:create
+# Run database Migration
+rails db:migrate
+```
+### Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Kindly modify the files as needed.
 
-### Deployment
+### Run tests
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+To install rspec, in the terminal kindly run this command
 
-### `npm run build` fails to minify
+```
+$ gem install rspec
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+To run tests, please run this command
+```
+$ rspec ./spec/#{filename}_spec.rb
+```
+
+## Author
+
+👤 **Nati G/gorgis** <img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="20"/>
+
+- GitHub: [@NatiG25](https://github.com/NatiG25)
+- Twitter: [@NatiG87702270](https://twitter.com/NatiG87702270)
+- LinkedIn: [@Natnail](https://www.linkedin.com/in/natnailgorgis/ )
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page]().
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- [Microverse](https://www.microverse.org/)
+- Code Reviewers
+- Original design idea by [muratk](https://www.behance.net/muratk)
+
+The [Creative Commons license of the design](https://creativecommons.org/licenses/by-nc/4.0/) requires that you give appropriate credit to the author. Therefore, you must do it in the README of your project.
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
