@@ -41,7 +41,7 @@ function NavigationPanel() {
 
         <ul className="panel-links">
           <li className={isActive ? 'active-link' : ''}>
-            <Link to="/home">Home</Link>
+            <Link onClick={() => toggleActiveNav(!NavIsActive)} to="/home">Home</Link>
           </li>
           <li className={isActive ? 'active-link' : ''}>
             <Link
