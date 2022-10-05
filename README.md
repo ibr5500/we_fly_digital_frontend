@@ -99,13 +99,32 @@ To run tests, please run this command
 $ rspec ./spec/#{filename}_spec.rb
 ```
 
-## Author
+## Authors
 
 👤 **Nati G/gorgis** <img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="20"/>
 
 - GitHub: [@NatiG25](https://github.com/NatiG25)
 - Twitter: [@NatiG87702270](https://twitter.com/NatiG87702270)
 - LinkedIn: [@Natnail](https://www.linkedin.com/in/natnailgorgis/ )
+
+👤 **Ibrahim Ahmat**
+
+- GitHub: [@ibr5500](https://github.com/ibr5500)
+- Twitter: [@ibr_ahmat](https://twitter.com/ibr_ahmat)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ibrahim-ahmat/)
+
+👤 **Kanombola Kanombola**
+
+- GitHub: [@KanoCode](https://github.com/KanoCode)
+- Twitter: [@kanombola_s](https://twitter.com/kanombola_s)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/kanombola-kanombola-a38b061a4/)
+
+👤 **GASOMINALI Olivier**
+
+- GitHub: [@GOlivierNation](https://github.com/GOlivierNation)
+- Twitter: [@OGasominali](https://twitter.com/OGasominali)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/oliviergasominali/)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
