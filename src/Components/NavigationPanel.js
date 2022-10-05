@@ -1,5 +1,8 @@
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
+import { IoMdClose } from 'react-icons/io';
+import { FaBars } from 'react-icons/fa';
+
 import logo from '../logo.png';
 
 function NavigationPanel() {
@@ -8,6 +11,7 @@ function NavigationPanel() {
 
   const handleSignOut = () => {
     sessionStorage.removeItem('loginToken');
+    window.reload();
   };
 
   return (
@@ -15,20 +19,21 @@ function NavigationPanel() {
       <aside className={NavIsActive ? 'nav-panel hidden' : 'nav-panel'}>
         <button
           type="button"
-          className="mobile-toggle"
+          className="mobile-toggle btn"
           onClick={() => {
             toggleActiveNav(!NavIsActive);
           }}
         >
           {NavIsActive ? (
-            <i className="fa-solid fa-x" />
+            <FaBars />
+
           ) : (
-            <i className="fa-sharp fa-solid fa-bars" />
+            <IoMdClose />
           )}
         </button>
 
         <div className="header__logo">
-          <Link to="/">
+          <Link to="/home">
             {' '}
             <img src={logo} alt="logo" />
           </Link>
@@ -36,23 +41,40 @@ function NavigationPanel() {
 
         <ul className="panel-links">
           <li className={isActive ? 'active-link' : ''}>
-            <Link to="/">Home</Link>
+            <Link onClick={() => toggleActiveNav(!NavIsActive)} to="/home">Home</Link>
           </li>
           <li className={isActive ? 'active-link' : ''}>
-            <Link onClick={() => toggleActiveNav(!NavIsActive)} to="/reserve">Add Flight</Link>
+            <Link
+              onClick={() => toggleActiveNav(!NavIsActive)}
+              to="/airlineForm"
+            >
+              Add Flight
+            </Link>
           </li>
           <li className={isActive ? 'active-link' : ''}>
-            <Link onClick={() => toggleActiveNav(!NavIsActive)} to="/cancelled">Cancelled Flight</Link>
+            <Link
+              onClick={() => toggleActiveNav(!NavIsActive)}
+              to="/delete_flight"
+            >
+              Delete Flight
+            </Link>
           </li>
 
           <li className={isActive ? 'active-link' : ''}>
             {' '}
-            <Link onClick={() => toggleActiveNav(!NavIsActive)} to="/reserved">Reservations</Link>
+            <Link
+              onClick={() => toggleActiveNav(!NavIsActive)}
+              to="/reservations"
+            >
+              Reservations
+            </Link>
           </li>
 
           <li className={isActive ? 'active-link' : ''}>
             {' '}
-            <Link onClick={handleSignOut} to="/login">SignOut</Link>
+            <Link onClick={handleSignOut} to="/">
+              SignOut
+            </Link>
           </li>
         </ul>
         <ul className="social-links">

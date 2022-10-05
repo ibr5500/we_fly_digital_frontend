@@ -28,6 +28,17 @@ export const addNewAirlines = createAsyncThunk('airline/fetchNewAirlines', async
   return res;
 });
 
+export const deleteAirline = createAsyncThunk('airline/deleteAirline', async (id) => {
+  const res = await fetch(`${baseURL}/airlines/${id}`, {
+    method: 'DELETE',
+    headers: {
+      'Content-type': 'application/json',
+      Authorization: `Bearer ${sessionStorage.getItem('loginToken')}`,
+    },
+  });
+  return res.json();
+});
+
 const airlineSlice = createSlice({
   name: 'airline',
   initialState,
@@ -48,6 +59,16 @@ const airlineSlice = createSlice({
     });
 
     builder.addCase(addNewAirlines.rejected, (state, action) => {
+      const stateRejected = state;
+      stateRejected.error = action.payload.error;
+    });
+
+    builder.addCase(deleteAirline.fulfilled, (state, action) => {
+      const stateFulfilled = state;
+      stateFulfilled.airlines = action.payload;
+    });
+
+    builder.addCase(deleteAirline.rejected, (state, action) => {
       const stateRejected = state;
       stateRejected.error = action.payload.error;
     });
