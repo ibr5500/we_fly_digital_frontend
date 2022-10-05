@@ -28,6 +28,7 @@ const AirlineDetails = () => {
               <h4>{item.price}</h4>
             </div>
             <Link className="btn book-btn my-2" to={`/reservationForm/${item.id}`}>Book now</Link>
+            <Link className="btn my-2" to="/home">Back</Link>
           </div>
         </div>
       ))}
