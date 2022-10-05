@@ -72,9 +72,9 @@ function NavigationPanel() {
 
           <li className={isActive ? 'active-link' : ''}>
             {' '}
-                <Link onClick={handleSignOut} to="/">
-                  SignOut
-                </Link>
+            <Link onClick={handleSignOut} to="/">
+              SignOut
+            </Link>
           </li>
         </ul>
         <ul className="social-links">

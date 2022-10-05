@@ -61,7 +61,11 @@ function Reservations() {
                 </tr>
               ))
             ) : (
-              <h2>You have no reservations!</h2>
+              <tr>
+                <td>
+                  <h2>You have no reservations!</h2>
+                </td>
+              </tr>
             )}
           </tbody>
         </table>
