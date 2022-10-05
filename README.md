@@ -145,4 +145,4 @@ The [Creative Commons license of the design](https://creativecommons.org/license
 
 ## 📝 License
 
-This project is [MIT](./MIT.md) licensed.
+This project is [MIT](./LICENSE) licensed.
