@@ -14,6 +14,10 @@ function AirlineForm() {
 
   const handleNewAirline = (e) => {
     e.preventDefault(e);
+
+    if (!airline.name || !airline.image || !airline.price) {
+      alert('Fill up the form!');
+    }
     const newAirline = {
       airline: { ...airline },
     };
@@ -28,7 +32,7 @@ function AirlineForm() {
 
     if (airline.name && airline.image && airline.price) {
       setTimeout(() => {
-        navigate('/');
+        navigate('/home');
       }, 1000);
     }
   };
