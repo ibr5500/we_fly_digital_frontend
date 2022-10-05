@@ -6,7 +6,7 @@
 
 
 ## API Documentation
-Check out the [API documentation]()
+Check out the [API documentation](https://flight-digital.herokuapp.com/api-docs/index.html)
 
 ## Project Documentation 📄
 
@@ -24,7 +24,7 @@ Check out the [API documentation]()
 
 ### Back-End Repo 
 
-- [x] [We Fly Digital]()
+- [x] [We Fly Digital](https://github.com/ibr5500/flight_reservation-backend)
 
 ## Built With 🛠️
 
