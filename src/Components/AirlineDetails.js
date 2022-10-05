@@ -8,9 +8,7 @@ const AirlineDetails = () => {
   const airlineDetails = dataList.filter((flight) => +flight.id === +airline.id);
 
   return (
-    <div className="container my-5
-     "
-    >
+    <div className="container my-5">
       {airlineDetails.map((item) => (
         <div className="details-container" key={item.id}>
           <div className="img-container">
