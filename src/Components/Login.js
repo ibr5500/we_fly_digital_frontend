@@ -15,7 +15,10 @@ const Login = () => {
 
   const handleUserLogin = (e) => {
     e.preventDefault(e);
-    if (!user.username || !user.password) alert('Fill up the form!'); // eslint-disable-line
+    if (!user.username || !user.password) {
+      alert('Fill up the form!');
+      return;
+    }
 
     const currentUser = {
       user: { ...user },

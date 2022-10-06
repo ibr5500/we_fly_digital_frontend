@@ -17,6 +17,7 @@ function AirlineForm() {
 
     if (!airline.name || !airline.image || !airline.price) {
       alert('Fill up the form!');
+      return;
     }
     const newAirline = {
       airline: { ...airline },
@@ -30,17 +31,15 @@ function AirlineForm() {
       image: '',
     });
 
-    if (airline.name && airline.image && airline.price) {
-      setTimeout(() => {
-        navigate('/home');
-      }, 1000);
-    }
+    setTimeout(() => {
+      navigate('/home');
+    }, 1000);
   };
 
   return (
     <section className="add-airline container">
       <h2>Add New Airline</h2>
-      <form onSubmit={handleNewAirline}>
+      <form onSubmit={handleNewAirline} className="form">
         <div className="mb-3">
           <label htmlFor="airline-name" className="form-label">
             Airline Name
@@ -58,12 +57,12 @@ function AirlineForm() {
           <label htmlFor="image" className="form-label">
             Airline logo
             <input
-              type="text"
+              type="url"
               className="form-control"
               id="image"
               value={airline.image}
               onChange={(e) => setAirline({ ...airline, image: e.target.value })}
-              placeholder="Image"
+              placeholder="Image URL"
             />
           </label>
         </div>
@@ -73,7 +72,7 @@ function AirlineForm() {
             Price
             <input
               className="form-control"
-              type="text"
+              type="number"
               id="price"
               value={airline.price}
               onChange={(e) => setAirline({ ...airline, price: e.target.value })}

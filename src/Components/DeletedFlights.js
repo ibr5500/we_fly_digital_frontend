@@ -35,8 +35,6 @@ const DeletedFlights = () => {
                   <div className="cancelled-flights">
                     <h3>{item.name}</h3>
                     {' '}
-                    {item.id}
-                    {' '}
                     ................
                     <h4>
                       Price: $

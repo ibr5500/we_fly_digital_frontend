@@ -102,20 +102,19 @@ span i:hover {
 
   @keyframes toggleNavpanel {
     from {
-      left: -296px;
+      left: -410px;
     }
 
     to {
-      left: -296px;
+      left: -410px;
     }
   }
 
   /* The element to apply the animation to */
   .hidden {
     width: 88vw;
-    left: -296px;
     animation-name: toggleNavpanel;
-    animation-duration: 4s;
+    animation-duration: 120s;
   }
 
   .nav-panel {
@@ -279,7 +278,7 @@ Details
 
 .details-container {
   width: 100%;
-  min-height: 60vh;
+  padding: 2.5rem;
   border: solid 1px whitesmoke;
   border-radius: 23px;
   box-shadow: 5px 12px 20px 2px rgba(0, 0, 0, 0.2);
@@ -314,6 +313,14 @@ Airline styles
   align-items: center;
 }
 
+.form {
+  width: 80%;
+}
+
+.form-label {
+  width: 100%;
+}
+
 .add-airline {
   position: absolute;
   display: flex;
@@ -338,5 +345,5 @@ Airline styles
 }
 
 .cancelled-flights {
-  min-height: 23vh;
+  padding: 2rem 0;
 }

@@ -15,6 +15,12 @@ function SignUp() {
 
   const handleRegisterSubmit = (e) => {
     e.preventDefault(e);
+
+    if (!newuser.username || !newuser.password || !newuser.email || !newuser.fullname) {
+      alert('Fill up the form!');
+      return;
+    }
+
     const user = {
       user: { ...newuser },
     };
