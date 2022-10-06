@@ -4,7 +4,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import { fetchCurrentUser } from '../redux/users/registerSlice';
 
 const Login = () => {
-  const loginInfo = useSelector((state) => state.userInfo.login);
   const dispach = useDispatch();
   const navigate = useNavigate();
 
@@ -34,14 +33,6 @@ const Login = () => {
       username: '',
       password: '',
     });
-
-    console.log(loginInfo.error);
-    // if (!loginInfo.error) {
-    //  setTimeout(() => {
-    //    navigate('/home');
-    //    window.location.reload(false);
-    //  }, 2000);
-    // }
   };
 
   return (
