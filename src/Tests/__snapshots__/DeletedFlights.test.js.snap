@@ -11,7 +11,7 @@ exports[`renders deleted page correctly 1`] = `
       Flights list:
     </h2>
     <p>
-      Want to cancel? please pic a flight from the following list
+      Want to cancel? please pick a flight from the following list
     </p>
   </div>
   <div
@@ -19,11 +19,7 @@ exports[`renders deleted page correctly 1`] = `
   >
     <div
       className="flights"
-    >
-      <p>
-        There are no flight yet!!
-      </p>
-    </div>
+    />
   </div>
 </section>
 `;

@@ -357,10 +357,10 @@ Airline styles
 .details-reservation-container {
   display: grid;
   grid-template-columns: auto;
-  margin: auto 2%;
+  margin: 0 5%;
   gap: 2%;
   position: relative;
-  width: 70vw;
+  width: auto;
 }
 
 .reserve-item:nth-child(even) {

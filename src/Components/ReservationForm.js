@@ -18,18 +18,21 @@ function ReservationForm() {
     const newReservation = {
       reservation: { ...reservations },
     };
+
     dispach(addNewReservations(newReservation));
+
+    if (!reservations.date || !reservations.city) {
+      alert('Fill up the form!');
+      return;
+    }
+    setTimeout(() => {
+      navigate('/reservations');
+    }, 1000);
 
     setReservations({
       date: '',
       city: '',
     });
-
-    if (reservations.date && reservations.city) {
-      setTimeout(() => {
-        navigate('/reservations');
-      }, 1000);
-    }
   };
 
   return (

@@ -19,11 +19,7 @@ exports[`renders home page correctly 1`] = `
   >
     <div
       className="flights"
-    >
-      <p>
-        There are no flight yet!!
-      </p>
-    </div>
+    />
   </div>
 </section>
 `;

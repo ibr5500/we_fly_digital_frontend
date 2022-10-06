@@ -59,9 +59,13 @@ exports[`renders reservations page correctly 1`] = `
         </tr>
       </thead>
       <tbody>
-        <h2>
-          You have no reservations!
-        </h2>
+        <tr>
+          <td>
+            <h2>
+              You have no reservations!
+            </h2>
+          </td>
+        </tr>
       </tbody>
     </table>
   </div>

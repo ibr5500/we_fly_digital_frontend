@@ -7,7 +7,7 @@ function Reservations() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchReservations());
+    if (!reserveInfo.reservations) dispatch(fetchReservations());
   }, [dispatch]);
 
   return (

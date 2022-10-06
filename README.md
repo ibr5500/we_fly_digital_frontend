@@ -29,10 +29,10 @@ Check out the [API documentation](https://flight-digital.herokuapp.com/api-docs/
 
 ## Built With 🛠️
 
-- [x] Programming Language: [Ruby](https://www.ruby-lang.org/en/)
-- [x] Framework: [Ruby on Rails](https://rubyonrails.org/)
-- [x] Linter: [Rubocop](https://rubocop.org/)
-- [x] Code Editor: [VS Code](https://code.visualstudio.com/)
+- [x] Programming Language: ```Javascript```
+- [x] Framework: ```React JS```
+- [x] Linter: ```ESlint```
+- [x] Code Editor: ```VS Code```
 
 ## Getting Started
 
@@ -43,21 +43,6 @@ To get a local copy up and running follow these simple steps.
 - [x] A web browser like Google Chrome.
 - [x] A code editor like Visual Studio Code with Git and Ruby.
 
-You can check if Git is installed by running the following command in the terminal.
-```
-$ git --version
-```
-
-Likewise for Ruby installation.
-```
-$ ruby --version && irb
-```
-
-To install rails, in the terminal kindly run this command
-```
-$ gem install rails
-```
-
 ### Setup
 
 Clone the repository using the GitHub link provided below.
@@ -66,38 +51,25 @@ Clone the repository using the GitHub link provided below.
 
 To get a local copy up and running follow these simple example steps.
 
-- clone the repository by running: git@github.com:ibr5500/flight_reservation-backend.git
+- clone the repository by running: git clone git@github.com:ibr5500/flight_reservation-frontend.git
 
-- setup rails app
-``` rails . my_api --api --database=postgresql```
-- navigate to the folder
-  ``` cd <DIRECTORY> ```
-- Install packages
-  ``` npm i ```
-- Run the app
-```sh
-# Load the schema
-rails db:schema:load
-# Create the database
-rake db:create
-# Run database Migration
-rails db:migrate
+```bash
+cd flight_reservation-frontend
 ```
-### Usage
-
-Kindly modify the files as needed.
-
-### Run tests
-
-To install rspec, in the terminal kindly run this command
-
+- Install dependencies
+```bash
+npm i 
+or
+npm install
 ```
-$ gem install rspec
+- To Start the development server
+```bash
+npm start
 ```
 
-To run tests, please run this command
-```
-$ rspec ./spec/#{filename}_spec.rb
+- To test the project
+```bash
+npm test
 ```
 
 ## Authors

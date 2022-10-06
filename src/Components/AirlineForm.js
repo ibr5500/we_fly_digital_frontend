@@ -15,25 +15,25 @@ function AirlineForm() {
   const handleNewAirline = (e) => {
     e.preventDefault(e);
 
-    if (!airline.name || !airline.image || !airline.price) {
-      alert('Fill up the form!');
-      return;
-    }
     const newAirline = {
       airline: { ...airline },
     };
 
     dispach(addNewAirlines(newAirline));
 
+    if (!airline.name || !airline.image || !airline.price) {
+      alert('Fill up the form!');
+      return;
+    }
+    setTimeout(() => {
+      navigate('/home');
+    }, 1000);
+
     setAirline({
       name: '',
       price: '',
       image: '',
     });
-
-    setTimeout(() => {
-      navigate('/home');
-    }, 1000);
   };
 
   return (
