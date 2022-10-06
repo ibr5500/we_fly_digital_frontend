@@ -15,27 +15,33 @@ const Login = () => {
 
   const handleUserLogin = (e) => {
     e.preventDefault(e);
-    if (!user.username || !user.password) {
-      alert('Fill up the form!');
-      return;
-    }
 
     const currentUser = {
       user: { ...user },
     };
     dispach(fetchCurrentUser(currentUser));
 
+    if (user.username && user.password) {
+      setTimeout(() => {
+        navigate('/home');
+        window.location.reload(false);
+      }, 1000);
+    } else {
+      alert('Username or Password cannot be empty !!');
+      return;
+    }
     setUser({
       username: '',
       password: '',
     });
 
-    if (!loginInfo.error) {
-      setTimeout(() => {
-        navigate('/home');
-        window.location.reload(false);
-      }, 2000);
-    }
+    console.log(loginInfo.error);
+    // if (!loginInfo.error) {
+    //  setTimeout(() => {
+    //    navigate('/home');
+    //    window.location.reload(false);
+    //  }, 2000);
+    // }
   };
 
   return (
