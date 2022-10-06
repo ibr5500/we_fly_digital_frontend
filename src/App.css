@@ -94,7 +94,6 @@ span i:hover {
 /* Mobile screen humberger menu */
 
 @media only screen and (max-width: 600px) {
-
   .mobile-toggle {
     display: block;
     position: fixed;
