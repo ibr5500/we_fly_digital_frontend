@@ -19,16 +19,15 @@ const Home = () => {
       </div>
       <div className="container">
         <div className="flights">
-          {!(dataList) ? <p>There are no flight yet!!</p>
-            : dataList.map((item) => (
-              <Airline
-                key={item.id}
-                id={item.id}
-                image={item.image}
-                airlineName={item.name}
-                price={item.price}
-              />
-            ))}
+          {(dataList) ? dataList.map((item) => (
+            <Airline
+              key={item.id}
+              id={item.id}
+              image={item.image}
+              airlineName={item.name}
+              price={item.price}
+            />
+          )) : null }
         </div>
       </div>
     </section>

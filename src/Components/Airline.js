@@ -5,12 +5,12 @@ import PropTypes from 'prop-types';
 const Airline = ({
   id, image, airlineName, price,
 }) => (
-  <div>
+  <div className="card mb-3 details-container">
     <Link key={id} to={`/airline/${id}`} className="link">
       <div className="img-container">
         <img src={image} alt={airlineName} />
       </div>
-      <div className="contents">
+      <div className="cancelled-flights contents">
         <h3>{airlineName}</h3>
         {' '}
         ................

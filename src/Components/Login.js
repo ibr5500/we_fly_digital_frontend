@@ -34,7 +34,7 @@ const Login = () => {
       setTimeout(() => {
         navigate('/home');
         window.location.reload(false);
-      }, 1000);
+      }, 2000);
     }
   };
 

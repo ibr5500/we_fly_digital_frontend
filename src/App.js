@@ -12,7 +12,7 @@ import AirlineDetails from './Components/AirlineDetails';
 
 function App() {
   return (
-    <div>
+    <div className="app">
       {(sessionStorage.getItem('loginToken')) ? <NavigationPanel /> : null }
       <Routes>
         <Route path="/" element={<Login />} />

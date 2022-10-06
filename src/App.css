@@ -1,10 +1,15 @@
+.app {
+  display: flex;
+  flex-direction: row;
+}
+
 ul {
   list-style: none;
 }
 
 .nav-panel {
   height: 100vh;
-  width: 21vw;
+  width: 20%;
   background-color: #fff;
   top: 0;
   z-index: 23;
@@ -89,6 +94,7 @@ span i:hover {
 /* Mobile screen humberger menu */
 
 @media only screen and (max-width: 600px) {
+
   .mobile-toggle {
     display: block;
     position: fixed;
@@ -125,6 +131,8 @@ span i:hover {
 .main {
   display: flex;
   flex-direction: column;
+  width: 75%;
+  margin: 0 0 0 20%;
 }
 
 .header {
@@ -145,16 +153,33 @@ span i:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 60%;
+  width: 100%;
   height: auto;
   margin: 0 auto;
   gap: 15px;
 }
 
 .flights {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto;
+  grid-gap: 10px;
+  grid-auto-flow: row;
   margin: 1rem auto 0 auto;
-  height: 300px;
+  width: 80%;
   text-align: center;
+}
+
+@media screen and (max-width: 850px) {
+  .flights {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .flights {
+    grid-template-columns: auto;
+  }
 }
 
 .img-container {
@@ -285,7 +310,6 @@ Details
 }
 
 .details-container .contents {
-  min-height: 46vh;
   display: flex;
   flex-direction: column;
 }
