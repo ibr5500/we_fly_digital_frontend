@@ -2,7 +2,7 @@
 
 # We Fly Digital
 
-> We Fly Digital is a responsive app that lists flight reservations. A user can selects a specific airline, see the details page with its full description, and can click the "Reserve" button to reserve it. The user can also access the "Reserve" page from the navigation panel, add or delete a reservation or airline.
+> We Fly Digital is a responsive app that lists flight reservations. A user can select a specific airline, see the details page with its full description, and can click the "Reserve" button to reserve it. The user can also access the "Reserve" page from the navigation panel, and add or delete a reservation or airline.
 
 
 ## API Documentation
