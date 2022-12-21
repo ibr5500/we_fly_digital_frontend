@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders reservations page correctly 1`] = `
+<section
+  className="container reservation"
+>
+  <div
+    className="mb-5 m-auto"
+  >
+    <h1
+      className="text-center text-black font-black text-3xl"
+    >
+      All Reservatoins
+    </h1>
+    <p
+      className="text-center text-gray-500 font-semibold text-1xl"
+    >
+      Travel the world with us
+    </p>
+  </div>
+  <div
+    className="details-reservation-container table-responsive"
+  >
+    <table
+      className="table"
+    >
+      <thead>
+        <tr
+          className="reserve-item"
+        >
+          <th
+            scope="col"
+          >
+            <h4>
+              Airline
+            </h4>
+          </th>
+          <th
+            scope="col"
+          >
+            <h4>
+              City
+            </h4>
+          </th>
+          <th
+            scope="col"
+          >
+            <h4>
+              Date
+            </h4>
+          </th>
+          <th
+            scope="col"
+          >
+            <h4>
+              Price
+            </h4>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <h2>
+              You have no reservations!
+            </h2>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+`;

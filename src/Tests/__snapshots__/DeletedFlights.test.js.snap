@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders deleted page correctly 1`] = `
+<section
+  className="add-airline container "
+>
+  <div
+    className="header"
+  >
+    <h2>
+      Flights list:
+    </h2>
+    <p>
+      Want to cancel? please pick a flight from the following list
+    </p>
+  </div>
+  <div
+    className=""
+  >
+    <div
+      className="flights"
+    />
+  </div>
+</section>
+`;
