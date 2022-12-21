@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { fetchCurrentUser } from '../redux/users/registerSlice';
 
-const Login = () => {
+function Login() {
   const dispach = useDispatch();
   const navigate = useNavigate();
 
@@ -26,7 +26,7 @@ const Login = () => {
         window.location.reload(false);
       }, 1000);
     } else {
-      alert('Username or Password cannot be empty !!');
+      alert('Username or Password cannot be empty !!'); // eslint-disable-line no-alert
       return;
     }
     setUser({
@@ -46,7 +46,10 @@ const Login = () => {
 
           <form onSubmit={handleUserLogin}>
             <div className="input-floor">
-              <label htmlFor="name-input" className="w-100 my-2">
+              <label
+                htmlFor="name-input"
+                className="w-100 my-2"
+              >
                 <input
                   id="name-input"
                   className="form-control py-2  px-4 "
@@ -59,7 +62,10 @@ const Login = () => {
             </div>
 
             <div className="input-floor">
-              <label htmlFor="password-input" className="w-100 my-2">
+              <label
+                htmlFor="password-input"
+                className="w-100 my-2"
+              >
                 <input
                   id="password-input"
                   className="form-control py-2  px-4 "
@@ -72,10 +78,16 @@ const Login = () => {
             </div>
 
             <div className="button-container w-50">
-              <button type="submit" className="btn sign-up">
+              <button
+                type="submit"
+                className="btn sign-up"
+              >
                 Login
               </button>
-              <Link to="/signup" className="btn log-in my-2">
+              <Link
+                to="/signup"
+                className="btn log-in my-2"
+              >
                 SignUp
               </Link>
             </div>
@@ -84,6 +96,6 @@ const Login = () => {
       </div>
     </section>
   );
-};
+}
 
 export default Login;

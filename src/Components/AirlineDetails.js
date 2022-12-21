@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
 
-const AirlineDetails = () => {
+function AirlineDetails() {
   const airline = useParams();
   const dataList = useSelector((state) => state.airlines.airlines.data);
   const airlineDetails = dataList.filter((flight) => +flight.id === +airline.id);
@@ -32,6 +32,6 @@ const AirlineDetails = () => {
       ))}
     </div>
   );
-};
+}
 
 export default AirlineDetails;

@@ -22,7 +22,7 @@ function AirlineForm() {
     dispach(addNewAirlines(newAirline));
 
     if (!airline.name || !airline.image || !airline.price) {
-      alert('Fill up the form!');
+      alert('Fill up the form!'); // eslint-disable-line no-alert
       return;
     }
     setTimeout(() => {
@@ -39,9 +39,15 @@ function AirlineForm() {
   return (
     <section className="add-airline container">
       <h2>Add New Airline</h2>
-      <form onSubmit={handleNewAirline} className="form">
+      <form
+        onSubmit={handleNewAirline}
+        className="form"
+      >
         <div className="mb-3">
-          <label htmlFor="airline-name" className="form-label">
+          <label
+            htmlFor="airline-name"
+            className="form-label"
+          >
             Airline Name
             <input
               type="text"
@@ -54,7 +60,10 @@ function AirlineForm() {
           </label>
         </div>
         <div className="mb-3">
-          <label htmlFor="image" className="form-label">
+          <label
+            htmlFor="image"
+            className="form-label"
+          >
             Airline logo
             <input
               type="url"
@@ -68,7 +77,10 @@ function AirlineForm() {
         </div>
 
         <div className="mb-3">
-          <label htmlFor="price" className="form-label">
+          <label
+            htmlFor="price"
+            className="form-label"
+          >
             Price
             <input
               className="form-control"
@@ -80,7 +92,12 @@ function AirlineForm() {
             />
           </label>
         </div>
-        <button className="btn book-btn" type="submit">Submit</button>
+        <button
+          className="btn book-btn"
+          type="submit"
+        >
+          Submit
+        </button>
       </form>
     </section>
   );

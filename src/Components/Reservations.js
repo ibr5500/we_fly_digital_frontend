@@ -8,17 +8,13 @@ function Reservations() {
 
   useEffect(() => {
     if (!reserveInfo.reservations) dispatch(fetchReservations());
-  }, [dispatch]);
+  });
 
   return (
     <section className="container reservation">
       <div className="mb-5 m-auto">
-        <h1 className="text-center text-black font-black text-3xl">
-          All Reservatoins
-        </h1>
-        <p className="text-center text-gray-500 font-semibold text-1xl">
-          Travel the world with us
-        </p>
+        <h1 className="text-center text-black font-black text-3xl">All Reservatoins</h1>
+        <p className="text-center text-gray-500 font-semibold text-1xl">Travel the world with us</p>
       </div>
       <div className="details-reservation-container table-responsive">
         <table className="table">
@@ -39,11 +35,12 @@ function Reservations() {
             </tr>
           </thead>
           <tbody>
-
             {reserveInfo.reservations ? (
               reserveInfo.reservations.map((item) => (
-
-                <tr className="reserve-item" key={item.reservation.id}>
+                <tr
+                  className="reserve-item"
+                  key={item.reservation.id}
+                >
                   <th scope="row">
                     <p>{item.airline.name}</p>
                   </th>

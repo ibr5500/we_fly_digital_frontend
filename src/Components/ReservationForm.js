@@ -22,7 +22,7 @@ function ReservationForm() {
     dispach(addNewReservations(newReservation));
 
     if (!reservations.date || !reservations.city) {
-      alert('Fill up the form!');
+      alert('Fill up the form!'); // eslint-disable-line no-alert
       return;
     }
     setTimeout(() => {
@@ -46,7 +46,10 @@ function ReservationForm() {
 
           <form onSubmit={handleReservationSubmit}>
             <div className="input-floor">
-              <label htmlFor="name-input" className="w-100 my-2">
+              <label
+                htmlFor="name-input"
+                className="w-100 my-2"
+              >
                 <input
                   id="name-input"
                   className="form-control py-2  px-4 "
@@ -58,7 +61,10 @@ function ReservationForm() {
             </div>
 
             <div className="input-floor">
-              <label htmlFor="city-input" className="w-100 my-2">
+              <label
+                htmlFor="city-input"
+                className="w-100 my-2"
+              >
                 <input
                   id="city-input"
                   className="form-control py-2  px-4 "
@@ -71,10 +77,12 @@ function ReservationForm() {
             </div>
 
             <div className="button-container w-50">
-              <button type="submit" className="btn sign-up">
+              <button
+                type="submit"
+                className="btn sign-up"
+              >
                 Reserve
               </button>
-
             </div>
           </form>
         </div>

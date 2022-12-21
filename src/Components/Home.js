@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchAirlines } from '../redux/airlines/airlines';
 import Airline from './Airline';
 
-const Home = () => {
+function Home() {
   const dataList = useSelector((state) => state.airlines.airlines.data);
   const dispach = useDispatch();
 
@@ -32,6 +32,6 @@ const Home = () => {
       </div>
     </section>
   );
-};
+}
 
 export default Home;

@@ -17,7 +17,7 @@ function SignUp() {
     e.preventDefault(e);
 
     if (!newuser.username || !newuser.password || !newuser.email || !newuser.fullname) {
-      alert('Fill up the form!');
+      alert('Fill up the form!'); // eslint-disable-line no-alert
       return;
     }
 
@@ -48,7 +48,10 @@ function SignUp() {
             className="flex flex-col gap-5 items-center "
           >
             <div className="input-floor">
-              <label htmlFor="fullname-input" className="w-100 my-2">
+              <label
+                htmlFor="fullname-input"
+                className="w-100 my-2"
+              >
                 <input
                   id="fullname-input"
                   className="form-control py-2  px-4 "
@@ -60,7 +63,10 @@ function SignUp() {
               </label>
             </div>
             <div className="">
-              <label htmlFor="username-input" className="w-100 my-2">
+              <label
+                htmlFor="username-input"
+                className="w-100 my-2"
+              >
                 <input
                   className="form-control py-2  px-4 "
                   type="text"
@@ -72,7 +78,10 @@ function SignUp() {
               </label>
             </div>
             <div className="">
-              <label htmlFor="email-input" className="w-100 my-2">
+              <label
+                htmlFor="email-input"
+                className="w-100 my-2"
+              >
                 <input
                   id="email-input"
                   className="form-control py-2  px-4 "
@@ -84,7 +93,10 @@ function SignUp() {
               </label>
             </div>
             <div className="">
-              <label htmlFor="password-input" className="w-100 my-2">
+              <label
+                htmlFor="password-input"
+                className="w-100 my-2"
+              >
                 <input
                   id="password-input"
                   className="form-control py-2  px-4"
@@ -96,14 +108,18 @@ function SignUp() {
               </label>
             </div>
             <div className="button-container w-50">
-
-              <button type="submit" className="btn sign-up my-2">
+              <button
+                type="submit"
+                className="btn sign-up my-2"
+              >
                 SignUp
               </button>
-              <Link to="/" className="btn log-in">
+              <Link
+                to="/"
+                className="btn log-in"
+              >
                 Login
               </Link>
-
             </div>
           </form>
         </div>

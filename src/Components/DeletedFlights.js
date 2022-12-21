@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchAirlines, deleteAirline } from '../redux/airlines/airlines';
 
-const DeletedFlights = () => {
+function DeletedFlights() {
   const dataList = useSelector((state) => state.airlines.airlines.data);
   const dispatch = useDispatch();
 
@@ -52,6 +52,6 @@ const DeletedFlights = () => {
       </div>
     </section>
   );
-};
+}
 
 export default DeletedFlights;
