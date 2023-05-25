@@ -31,7 +31,7 @@ function NavigationPanel() {
         )}
       </button>
 
-      <div className="header__logo">
+      <div className="header-logo">
         <Link to="/home">
           {' '}
           <img src={logo} alt="logo" />

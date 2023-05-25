@@ -24,7 +24,7 @@ function Login() {
       setTimeout(() => {
         navigate('/home');
         window.location.reload(false);
-      }, 1000);
+      }, 2200);
     } else {
       alert('Username or Password cannot be empty !!'); // eslint-disable-line no-alert
       return;
