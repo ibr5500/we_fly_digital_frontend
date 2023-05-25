@@ -1,3 +1,3 @@
-const baseURL = 'https://flight-digital.herokuapp.com/';
+const baseURL = 'https://weflydigitalapi.onrender.com/';
 
 export default baseURL;
