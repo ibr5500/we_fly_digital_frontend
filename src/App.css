@@ -52,16 +52,16 @@ ul {
   color: white;
 }
 
-.header__logo {
+.header-logo {
   margin: 0 auto;
   width: 40%;
 }
 
-.header__logo a {
+.header-logo a {
   display: inline-block;
 }
 
-.header__logo img {
+.header-logo img {
   width: 100%;
 }
 
@@ -105,7 +105,7 @@ span i:hover {
     left: 13%;
   }
 
-  @keyframes toggleNavpanel {
+  @keyframes toggle-navpanel {
     from {
       left: -410px;
     }
@@ -118,7 +118,7 @@ span i:hover {
   /* The element to apply the animation to */
   .hidden {
     width: 88vw;
-    animation-name: toggleNavpanel;
+    animation-name: toggle-navpanel;
     animation-duration: 120s;
   }
 
@@ -135,7 +135,7 @@ span i:hover {
 }
 
 .header {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   text-align: center;
 }
 
@@ -164,7 +164,7 @@ span i:hover {
   grid-template-rows: auto auto;
   grid-gap: 10px;
   grid-auto-flow: row;
-  margin: 1rem auto 0 auto;
+  margin: 1rem auto 0;
   width: 80%;
   text-align: center;
 }
@@ -182,9 +182,8 @@ span i:hover {
 }
 
 .img-container {
-  width: -moz-fit-content;
   width: fit-content;
-  margin: 0 auto 10px auto;
+  margin: 0 auto 10px;
 }
 
 .img-container img {
@@ -199,7 +198,7 @@ span i:hover {
   color: #ababab;
   align-items: center;
   font-size: 1.2rem;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .contents h3,
@@ -230,7 +229,7 @@ sign up page--------------------------------------------------------------------
   height: 100vh;
   width: 100%;
   background-position: center;
-  background-image: url(./airplanes.jpg);
+  background-image: url("./airplanes.jpg");
   background-size: cover;
   position: fixed;
   top: 0;
@@ -240,7 +239,7 @@ sign up page--------------------------------------------------------------------
   width: 100%;
   position: fixed;
   height: 100vh;
-  background-color: rgba(151, 191, 25, 0.7);
+  background-color: rgb(151 191 25 / 70%);
 }
 
 .form-signin {
@@ -282,11 +281,11 @@ sign up page--------------------------------------------------------------------
   margin: auto;
 }
 
-.form-signin input[type='email'] {
+.form-signin input[type="email"] {
   margin-bottom: -1px;
 }
 
-.form-signin input[type='password'] {
+.form-signin input[type="password"] {
   margin-bottom: 10px;
 }
 
@@ -305,7 +304,7 @@ Details
   padding: 2.5rem;
   border: solid 1px whitesmoke;
   border-radius: 23px;
-  box-shadow: 5px 12px 20px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 12px 20px 2px rgb(0 0 0 / 20%);
 }
 
 .details-container .contents {
@@ -325,7 +324,7 @@ Details
   justify-content: space-between;
 }
 
-/* ------------------------------------------------------------------------------------------------------------------------------
+/* ---------------------------------------------------------------------------------------------------------------------
 Airline styles
 
 -------------------------------------------------------------- */
