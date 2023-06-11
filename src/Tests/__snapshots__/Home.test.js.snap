@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders home page correctly 1`] = `
+<section
+  className="main"
+>
+  <div
+    className="header"
+  >
+    <h2>
+      Flights list:
+    </h2>
+    <p>
+      Please book a flight from the following list
+    </p>
+  </div>
+  <div
+    className="container"
+  >
+    <div
+      className="flights"
+    />
+  </div>
+</section>
+`;
